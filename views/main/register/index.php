@@ -28,52 +28,51 @@
 	<link href="public/assets/css/main.css" rel="stylesheet">
 	<link href="public/assets/css/util.css" rel="stylesheet">
 </head>
-<body style="background-color: #666666;">
-	
-	<div class="limiter">
+<body>
+	<?php
+  		include_once('views/main/navbar.php');
+	?>
+	<div class="limiter" style="margin-top: 0px!important;">
 		<div class="container-login100">
-			<div class="wrap-login100">
+			<div class="content__left">
+				<div class="login100-more" style="background-image: url('https://lh3.googleusercontent.com/pobuAfGspbPGYKNqPTzeBvYcZb8-KHcJ18Yre2y38u9lbNEC0LV5t37Byk1PdhHQpDw')">
+				</div>
+			</div>
+			<div class="content__right">
 				<form action="index.php?page=main&controller=register&action=submit" method="POST" class="login100-form validate-form">
 					<span class="login100-form-title p-b-20">
 						<strong>ĐĂNG KÝ</strong>
 					</span>
 					
-					
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email">
+						<input class="input100" type="text" name="email" placeholder="Email">
 						<span class="focus-input100"></span>
-						<span class="label-input100">Email</span>
 					</div>
 					
 					
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="pass">
+						<input class="input100" type="password" name="pass" placeholder="Password">
 						<span class="focus-input100"></span>
-						<span class="label-input100">Password</span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Fname is required">
-						<input class="input100" type="text" name="fname">
+						<input class="input100" type="text" name="fname" placeholder="Họ">
 						<span class="focus-input100"></span>
-						<span class="label-input100">Họ</span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Lname is required">
-						<input class="input100" type="text" name="lname">
+						<input class="input100" type="text" name="lname" placeholder="Tên">
 						<span class="focus-input100"></span>
-						<span class="label-input100">Tên</span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Age is required">
-						<input class="input100" type="text" name="age">
+						<input class="input100" type="text" name="age" placeholder="Tuổi">
 						<span class="focus-input100"></span>
-						<span class="label-input100">Tuổi</span>
 					</div>
 
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="phone">
+						<input class="input100" type="text" name="phone" placeholder="Số điện thoại">
 						<span class="focus-input100"></span>
-						<span class="label-input100">Số điện thoại</span>
 					</div>
 
 					<div class="form-check" style="padding-left: 0;">
@@ -90,31 +89,34 @@
 						<label class="form-check-label">Nữ</label>
 					</div>
 					
+					<?php
+						if (isset($error))
+						{
+							echo '<p class="login-box-msg" style="color: red">' . $error . '</p>';
+							unset($error);
+						}
+					?>
 					
 					<div class="flex-sb-m w-full p-t-3 p-b-32">
 						<div>
-							<a href="index.php?page=main&controller=login&action=index" class="txt1" style="font-size: 18px; color: blue;">
-								Đã có tài khoản? Đăng nhập!
-							</a>
-						</div>
-
-						<div>
-							<a href="index.php?page=main&controller=layouts&action=index" class="txt1" style="font-size: 18px; color: blue;">
-								Trở về trang chủ!
+							Bạn đã có tài khoản? 
+							<a href="index.php?page=main&controller=login&action=index" class="txt1" style="font-size: 18px; color: #e65a26;">
+								Đăng nhập ngay thôi!
 							</a>
 						</div>
 					</div>
 			
 					<div class="container-login100-form-btn">
-						<input class="login100-form-btn" type="submit" style="background-color: green; font-size: 20px;" value="Đăng ký tài khoản">
+						<input class="login100-form-btn" 
+						name="submit-btn-resgister"
+						type="submit" style="background-color: #e65a26; font-size: 20px; font-weight: bold;" value="Đăng ký tài khoản">
 					</div>
 				</form>
-
-				<div class="login100-more" style="background-size: 1000px; background-image: url('https://www.passerellesnumeriques.org/wp-content/uploads/2018/10/KMS-Technology.png');">
-				</div>
 			</div>
 		</div>
 	</div>
-	
+	<?php
+		include_once('views/main/footer.php');
+	?>
 </body>
 </html>

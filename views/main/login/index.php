@@ -29,66 +29,62 @@
 	<link href="public/assets/css/main.css" rel="stylesheet">
 	<link href="public/assets/css/util.css" rel="stylesheet">
 </head>
-<body style="background-color: #666666;">	
-
-	<div class="limiter">
+<?php
+  		include_once('views/main/navbar.php');
+?>
+<body>	
+	<div class = "limiter">
 		<div class="container-login100">
-			<div class="wrap-login100">
-				<form action="index.php?page=main&controller=login&action=index" method="POST" class="login100-form validate-form">
-					<span class="login100-form-title p-b-20">
+			<div class="content__left">
+				<div class="login100-more" style="background-image: url('https://lh3.googleusercontent.com/pobuAfGspbPGYKNqPTzeBvYcZb8-KHcJ18Yre2y38u9lbNEC0LV5t37Byk1PdhHQpDw')">
+				</div>
+			</div>
+			<div class="content__right">
+				<form action="index.php?page=main&controller=login&action=index" method="POST" class="validate-form login100-form">
+					<span class="p-b-20 login100-form-title">
 						<strong>ĐĂNG NHẬP</strong>
 					</span>
 					
-					
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="username">
+						<input class="input100" type="text" name="email" placeholder="Email">
 						<span class="focus-input100"></span>
-						<span class="label-input100">Email</span>
 					</div>
 					
 					
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="password">
+						<input class="input100" type="password" name="password" placeholder="Password">
 						<span class="focus-input100"></span>
-						<span class="label-input100">Password</span>
 					</div>
-					<?php
 
-					if (isset($err))
-					{
-						echo '<p class="login-box-msg" style="color: red">' . $err . '</p>';
-						unset($err);
-					}
+					<?php
+						if (isset($err))
+						{
+							echo '<p class="login-box-msg" style="color: red">' . $err . '</p>';
+							unset($err);
+						}
 					?>
+
 					<div class="flex-sb-m w-full p-t-3 p-b-32">
 						<div>
-							<a href="index.php?page=main&controller=register&action=index" class="txt1" style="font-size: 18px; color: blue;">
-								Chưa có tài khoản? Đăng ký!
-							</a>
-						</div>
-
-						<div>
-							<a href="index.php?page=main&controller=layouts&action=index" class="txt1" style="font-size: 18px; color: blue;">
-								Trở về trang chủ!
+							Bạn chưa có tài khoản? 
+							<a href="index.php?page=main&controller=register&action=index" class="txt1" style="font-size: 18px; color: #e65a26;">
+								Đăng ký ngay nào!
 							</a>
 						</div>
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" name="submit-btn" style="background-color: green; font-size: 20px;">
+						<button class="login100-form-btn" name="submit-btn" style="background-color: #e65a26; font-size: 20px; font-weight: bold;">
 							Đăng nhập
 						</button>
 					</div>
 				</form>
-
-				<div class="login100-more" style="background-image: url('https://www.passerellesnumeriques.org/wp-content/uploads/2018/10/KMS-Technology.png');">
-				</div>
 			</div>
 		</div>
 	</div>
-	
-	
-	
+	<?php
+		include_once('views/main/footer.php');
+	?>
 <!--===============================================================================================-->
 	<script src="public/assets/vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->

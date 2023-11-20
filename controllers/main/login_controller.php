@@ -21,13 +21,24 @@ class LoginController extends BaseController
 		}
 		else if (isset($_POST['submit-btn']))
 		{
-			$username = $_POST['username'];
+			$requiredFields = ['email', 'password'];
+    
+			foreach ($requiredFields as $field) {
+				if (empty($_POST[$field])) {
+					$err = "Vui lòng điền đầy đủ thông tin.";
+					$data = array('err' => $err);
+					$this->render('index', $data);
+					header('Location: index.php?page=main&controller=register&action=index');
+				}
+			}
+
+			$email = $_POST['email'];
 			$password = $_POST['password'];
 			unset($_POST);
-			$check = User::validation($username, $password);
+			$check = User::validation($email, $password);
 			if ($check == 1)
 			{
-				$_SESSION["guest"] = $username;
+				$_SESSION["guest"] = $email;
 				header('Location: index.php?page=main&controller=layouts&action=index');
 			}
 			else 

@@ -62,6 +62,12 @@ class User
             WHERE email = '$email'
             ;"
         );
+    
+        // Check if the query returned any results
+        if ($req->num_rows === 0) {
+            return null; // or handle accordingly based on your logic
+        }
+    
         $result = $req->fetch_assoc();
         $user = new User(
             $result['email'],
@@ -75,8 +81,10 @@ class User
             $result['updateAt'],
             '' // Do not return password
         );
+    
         return $user;
     }
+    
 
     static function insert($email, $profile_photo, $fname, $lname, $gender, $age, $phone, $password)
     {
@@ -118,6 +126,25 @@ class User
             return true;
         else
             return false;
+    }
+
+    static function validateRegister($email)
+    {
+        $db = DB::getInstance();
+
+        $stmt = $db->prepare("SELECT * FROM user WHERE email = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            $stmt->close();
+            return false;
+        }
+
+        $stmt->close();
+        return true;
     }
 
     static function changePassword($email, $oldpassword, $newpassword)
