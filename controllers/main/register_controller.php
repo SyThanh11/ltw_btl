@@ -16,35 +16,40 @@ class RegisterController extends BaseController
 
 	public function submit()
 {
-    $requiredFields = ['fname', 'lname', 'age', 'gender', 'phone', 'email', 'pass'];
-    
-    foreach ($requiredFields as $field) {
-        if (empty($_POST[$field])) {
-            $error = "Vui lòng điền đầy đủ thông tin.";
+	$requiredFields = ['fname', 'lname', 'age', 'gender', 'phone', 'email', 'pass'];
+
+	foreach ($requiredFields as $field) {
+		if (empty($_POST[$field])) {
+			$error = "Vui lòng điền đầy đủ thông tin.";
 			$data = array('error' => $error);
+			ob_start(); // Start output buffering
 			$this->render('index', $data);
-            header('Location: index.php?page=main&controller=register&action=index');
-        }
-    }
+			ob_end_flush(); // Flush output buffer and turn off output buffering
+			exit();
+		}
+	}
 
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-    $age = $_POST['age'];
-    $gender = $_POST['gender'];
-    $phone = $_POST['phone'];
-    $email = $_POST['email'];
-    $password = $_POST['pass'];
+	$fname = $_POST['fname'];
+	$lname = $_POST['lname'];
+	$age = $_POST['age'];
+	$gender = isset($_POST['gender']) ? $_POST['gender'] : null;
+	$phone = $_POST['phone'];
+	$email = $_POST['email'];
+	$password = $_POST['pass'];
 
-	if(User::validateRegister($email)){
+	if (User::validateRegister($email)) {
 		User::insert($email, 'public/img/user/default.png', $fname, $lname, $gender, $age, $phone, $password);
 
 		header('Location: index.php?page=main&controller=login&action=index');
 		exit();
 	}
+	
 	$error = "Email đã tồn tại";
 	$data = array('error' => $error);
+	ob_start(); // Start output buffering
 	$this->render('index', $data);
-   	header('Location: index.php?page=main&controller=register&action=index');
+	ob_end_flush(); // Flush output buffer and turn off output buffering
+	header('Location: index.php?page=main&controller=register&action=index');
 	exit();
 }
 
