@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #ef6603;
+  background: black;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -73,13 +73,13 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background: rgba(42, 44, 57, 0.9);
+  background: rgb(230, 91, 40, 0.9)
 }
 #header.header-transparent {
   background: transparent;
 }
 #header.header-scrolled {
-  background: rgba(42, 44, 57, 0.9);
+  background: rgb(230, 91, 40);
 }
 #header .logo h1 {
   font-size: 28px;
@@ -129,6 +129,7 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   transition: 0.3s;
   border-radius: 50px;
+  font-weight: 600;
 }
 .navbar a i, .navbar a:focus i {
   font-size: 12px;

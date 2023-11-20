@@ -3,7 +3,6 @@
   --------------------------------------------------------------*/
   #footer {
     background: #fff;
-    padding: 0 0 30px 0;
     color: #444444;
     font-size: 14px;
     background: #f1f6fe;
@@ -119,21 +118,24 @@
   #footer .footer-top .social-links a {
     font-size: 18px;
     display: inline-block;
-    background: #106eea;
+    background: white;
     color: #fff;
     line-height: 1;
     padding: 8px 0;
     margin-right: 4px;
-    border-radius: 4px;
+    border-radius: 50%;
     text-align: center;
     width: 36px;
     height: 36px;
     transition: 0.3s;
   }
   #footer .footer-top .social-links a:hover {
-    background: #3b8af2;
+    background: rgb(197, 64, 16);;
     color: #fff;
     text-decoration: none;
+  }
+  #footer .footer-top .social-links a:hover i {
+    color: white;
   }
   #footer .copyright {
     text-align: center;
@@ -151,4 +153,8 @@
       text-align: center;
       padding: 2px 0;
     }
+  }
+
+  .footer-links i{
+    color: rgb(230, 91, 40);
   }

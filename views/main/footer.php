@@ -1,53 +1,53 @@
 <!-- ======= Footer ======= -->
 <footer id="footer" style="background-color: #fff;">
-	<div class="footer-top" style="background-color: #14151c;">
+	<div class="footer-top" style="background-color: rgb(230, 91, 40);">
 	<div class="container">
 		<div class="row">
 
 		<div class="col-lg-3 col-md-6 footer-contact">
-			<h3 style ="color: #fff;">KMS<span style="color: #00BFFF;"> TECHNOLOGY</span></h3>
+			<h3 style ="color: #fff; font-size: 35px">VNG<span style="color: #141A46; font-size: 30px"> CORPORATION</span></h3>
 			
 			<p  style="color: #fff;">
 				<strong>Trụ sở chính </strong><br>
-				1776 Peachtree Rd NW<br>
-				Suite 200N <br>
-				Atlanta, GA 30309 <br><br>
-				<strong>Phone:</strong> 0123456789<br>
-				<strong>Email:</strong> info@kms-technology.com<br>
+				Z06 Số 13<br>
+				Tân Thuận Đông, Quận 7 <br>
+				Thành phố Hồ Chí Minh 700000 <br><br>
+				<strong>Phone:</strong> 8428 - 39623888<br>
+				<strong>Email:</strong> recruitment@vng.com.vn<br>
 			</p>
 		</div>
 
-		<div class="col-lg-3 col-md-6 footer-contact" style="margin-top: 44px;">
+		<div class="col-lg-3 col-md-6 footer-contact" style="margin-top: 55px;">
 			<p  style="color: #fff;">
 			<strong>Văn phòng tại Thành phố Đà Nẵng</strong> <br>
-			Số 346 đường 2/9<br>
-			Quận Hải Châu <br>
-			Thành phố Đà Nẵng <br><br>
-			<strong>Phone:</strong> 0123456789<br>
-			<strong>Email:</strong> info@kms-technology.com<br>
+			15 Hùng Vương<br>
+			Hải Châu 1, Hải Châu <br>
+			Đà Nẵng 550000 <br><br>
+			<strong>Phone:</strong> 0355 101 709<br>
+			<strong>Email:</strong> recruitment@vng.com.vn<br>
 			</p>
 		</div>
 
-		<div class="col-lg-3 col-md-6 footer-contact" style="margin-top: 44px;">
+		<div class="col-lg-3 col-md-6 footer-contact" style="margin-top: 55px;">
 			<p  style="color: #fff;">
-				<strong>Văn phòng tại Thành phố Hồ Chí Minh</strong> <br>
-				Số 02 Tản Viên<br>
-				Thành phố Thủ Đức <br>
-				Thành phố Hồ Chí Minh <br><br>
-				<strong>Phone:</strong> 0123456789<br>
-				<strong>Email:</strong> info@kms-technology.com<br>
+				<strong>Văn phòng tại Hà Nội</strong> <br>
+				165 P. Thái Hà<br>
+				Láng Hạ, Đống Đa <br>
+				Hà Nội <br><br>
+				<strong>Phone:</strong> 024 3786 8866<br>
+				<strong>Email:</strong> recruitment@vng.com.vn<br>
 			</p>
 		</div>
 
-		<div class="col-lg-3 col-md-6 footer-links" style="margin-top: 44px;">
-			<h4 style="color: #fff;">Kết nối với KMS qua mạng xã hội</h4>
+		<div class="col-lg-3 col-md-6 footer-links" style="margin-top: 55px;">
+			<h4 style="color: #fff;">Kết nối với VNG qua mạng xã hội</h4>
 			<p style="color: #fff;">Hãy cùng tạo những kết nối với chúng tôi rộng rãi trên các nền tảng mạng xã hội nhé!</p>
 			<div class="social-links mt-3">
-			<a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-			<a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-			<a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-			<a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-			<a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+			<a href="#" class="twitter"><i class="bx bxl-twitter" style="font-size: 20px;"></i></a>
+			<a href="#" class="facebook"><i class="bx bxl-facebook" style="font-size: 20px;"></i></a>
+			<a href="#" class="instagram"><i class="bx bxl-instagram" style="font-size: 20px;"></i></a>
+			<a href="#" class="google-plus"><i class="bx bxl-skype" style="font-size: 20px;"></i></a>
+			<a href="#" class="linkedin"><i class="bx bxl-linkedin" style="font-size: 20px;"></i></a>
 			</div>
 		</div>
 

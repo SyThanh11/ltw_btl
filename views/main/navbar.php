@@ -136,7 +136,8 @@
     <div class="container d-flex align-items-center justify-content-between">
       <div class="logo">
         <h1 class="logo me-auto"><a href="index.php?page=main&controller=layouts&action=index">
-        <img src="https://kms-technology.com/wp-content/uploads/2018/10/favicon.png" class="img-fluid" alt=""> KMS<span style="color: #00BFFF;"> TECHNOLOGY</span></a></h1>
+        <span style="font-weight: 700; font-size: 40px;" >VNG</span>
+        <span style="color: #141A46; font-weight: 700; font-size: 30px"> CORPORATION</span></a></h1>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -170,5 +171,4 @@
 
   <!-- ======= Hero Section ======= -->
   
-
 </html>
