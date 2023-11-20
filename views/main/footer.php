@@ -43,11 +43,11 @@
 			<h4 style="color: #fff;">Kết nối với VNG qua mạng xã hội</h4>
 			<p style="color: #fff;">Hãy cùng tạo những kết nối với chúng tôi rộng rãi trên các nền tảng mạng xã hội nhé!</p>
 			<div class="social-links mt-3">
-			<a href="#" class="twitter"><i class="bx bxl-twitter" style="font-size: 20px;"></i></a>
-			<a href="#" class="facebook"><i class="bx bxl-facebook" style="font-size: 20px;"></i></a>
-			<a href="#" class="instagram"><i class="bx bxl-instagram" style="font-size: 20px;"></i></a>
-			<a href="#" class="google-plus"><i class="bx bxl-skype" style="font-size: 20px;"></i></a>
-			<a href="#" class="linkedin"><i class="bx bxl-linkedin" style="font-size: 20px;"></i></a>
+			<a href="https://twitter.com/vngcorporation" class="twitter"><i class="bx bxl-twitter" style="font-size: 20px;"></i></a>
+			<a href="https://www.facebook.com/VNGCorporation.Page/?locale=vi_VN" class="facebook"><i class="bx bxl-facebook" style="font-size: 20px;"></i></a>
+			<a href="https://www.instagram.com/vngcorp.official/" class="instagram"><i class="bx bxl-instagram" style="font-size: 20px;"></i></a>
+			<a href="https://www.skype.com/en/" class="google-plus"><i class="bx bxl-skype" style="font-size: 20px;"></i></a>
+			<a href="https://vn.linkedin.com/company/vng-corporation" class="linkedin"><i class="bx bxl-linkedin" style="font-size: 20px;"></i></a>
 			</div>
 		</div>
 
