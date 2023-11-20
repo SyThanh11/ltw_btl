@@ -67,7 +67,7 @@
 					<div class="flex-sb-m w-full p-t-3 p-b-32">
 						<div>
 							Bạn chưa có tài khoản? 
-							<a href="index.php?page=main&controller=register&action=index" class="txt1" style="font-size: 18px; color: #e65a26;">
+							<a href="index.php?page=main&controller=register&action=index" class="txt1" style="font-size: 18px!important; color: #e65a26;">
 								Đăng ký ngay nào!
 							</a>
 						</div>

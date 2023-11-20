@@ -10,14 +10,14 @@ include_once('views/main/navbar.php');
           <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">' . $product->name . '</h5>
+                <h4 class="modal-title" id="exampleModalLabel" style="font-size: 30px; color: rgb(230, 91, 40); font-weight: 600">' . $product->name . '</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                   <img src="' . $product->img . '" class="card-img-top" alt="..." style="width: 70%; height=70%; margin-left: 15%;">
                   <br></br>
-                  <h6 class="card-text"><strong>' . $product->description . '</strong></h6>
-                  <p>' . $product->content . '</p>
+                  <h6 class="card-text text-center"><strong style="color: rgb(230, 91, 40);">' . $product->description . '</strong></h6>
+                  <p class="text-center">' . $product->content . '</p>
                 </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
@@ -27,26 +27,9 @@ include_once('views/main/navbar.php');
         </div>';
       }
     ?>
-
-     <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs" style="background: #1E90FF;">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h1 style="color: white;"><strong>DỊCH VỤ</strong></h1>
-          <ol>
-            <li style="color: white;">Trang chủ</li>
-            <li style="color: white;">Dịch vụ</li>
-          </ol>
-        </div>
-
-      </div>
-    </section><!-- End Breadcrumbs -->
-     
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container">
-
         <div class="section-title" data-aos="zoom-out">
           <h2>Chất lượng</h2>
           <p>Tại sao lại chọn KMS?</p>
@@ -64,7 +47,7 @@ include_once('views/main/navbar.php');
             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
               <div class="icon"><i class="bi bi-book" style="color: #e9bf06;"></i></div>
               <h4 class="title"><a href="">Phát triển các giải pháp sáng tạo</a></h4>
-              <p class="description">Tận dụng các công nghệ mới nổi để làm cho tầm nhìn của bạn sống động hơn.</p>
+              <p class="description">Tận dụng các công nghệ mới nổi đã trở thành một phần quan trọng và không thể thiếu trong mọi lĩnh vực của cuộc sống, từ công việc đến giáo dục và giải trí. </p>
             </div>
           </div>
 
@@ -116,12 +99,14 @@ include_once('views/main/navbar.php');
           foreach ($products as $product) {
             echo
               '<!-- Card 1 -->
-              <div class="col" data-aos="zoom-in" data-aos-delay="100" data-bs-toggle="modal" data-bs-target="#exampleModal'.$product->id.'">
-                <div class="card h-100">
-                  <img src="' . $product->img . '" class="card-img-top" alt="..." style="width="300" height="300"";>
-                  <div class="card-body">
-                    <h5 class="card-title">' . $product->name .'</h5>
-                    <p class="card-text">' . $product->description .'</p>
+              <div class="col" style="cursor: pointer;" data-aos="zoom-in" data-aos-delay="100" data-bs-toggle="modal" data-bs-target="#exampleModal'.$product->id.'">
+                <div class="card" style="width: 26rem; height: 100%; border: 2px solid rgb(230, 91, 40); border-radius: 10%; overflow: hidden;">
+                  <div class="h-100 w-100 card-top" style="display: flex; justify-content: center; overflow: hidden; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                    <img src="' . $product->img . '" alt="..." style="width: 100%; height: 350px; padding: 40px";  ">
+                  </div>
+                  <div class="card-body" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                    <h4 class="card-title" style="color: rgb(230, 91, 40); font-weight: 600!important"; >' . $product->name .'</h4>
+                    <p class="card-text text-center">' . $product->description .'</p>
                   </div>
                 </div>
               </div>';
