@@ -657,6 +657,10 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+#services .container{
+  margin-top: 70px;
+}
+
 .services .icon-box {
   padding: 30px;
   position: relative;
@@ -674,7 +678,7 @@ section {
 }
 .services .icon {
   position: absolute;
-  left: -20px;
+  left: 10px;
   top: calc(50% - 30px);
 }
 .services .icon i {
@@ -683,21 +687,21 @@ section {
   transition: 0.5s;
 }
 .services .title {
-  margin-left: 40px;
+  margin-left: 55px;
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
 }
 .services .title a {
-  color: #2a2c39;
+  color: rgb(230, 91, 40);
   transition: ease-in-out 0.3s;
 }
 .services .title a:hover {
   color: #ef6603;
 }
 .services .description {
-  font-size: 14px;
-  margin-left: 40px;
+  font-size: 16px;
+  margin-left: 55px;
   line-height: 24px;
   margin-bottom: 0;
 }
