@@ -5,7 +5,7 @@
 
 #homepage-carousel-1::before{
 	content: "";
-	background-image: url('https://kms-technology.com/wp-content/uploads/2022/04/Atlanta.jpg');
+	background-image: url('//corp.vcdn.vn/upload/vng/source/Banner/ABOUT%20BANNER%20220209-02.png');
 	background-size: cover;
 	position: absolute;
 	top: 0px;
@@ -22,8 +22,9 @@
 
 #homepage-carousel-2::before{
 	content: "";
-	background-image: url('https://media.baodautu.vn/Images/anhhoa/2019/07/04/Ong_Lam_Quc_V.jpg');
+	background-image: url('https://www.vngcloud.vn/documents/20126/1294954/vng-cloud-events-special-demo-tour-cover.jpg/866c5a90-e5e8-1d0a-362d-be0a6878b481?t=1592539421077');
 	background-size: cover;
+	background-position: center;
 	position: absolute;
 	top: 0px;
 	right: 0px;
@@ -39,9 +40,10 @@
 
 #homepage-carousel-3::before{
 	content: "";
-	background-image: url('https://vcdn-english.vnecdn.net/2019/08/26/kobitondoingukysutaivietnam210-6792-8400-1566806843_500x300.png');
+	background-image: url('https://bluec.vn/wp-content/uploads/2023/05/ZaloPay-Talks.jpg');
 	background-size: cover;
 	position: absolute;
+	background-position: center;
 	top: 0px;
 	right: 0px;
 	bottom: 0px;
@@ -60,15 +62,15 @@
 	transition: 0.5s;
 	line-height: 1;
 	margin: 10px;
-	color: black;
+	color: rgb(230, 91, 40);
 	-webkit-animation-delay: 0.8s;
 	animation-delay: 0.8s;
-	border: 2px solid #ef6603;
+	border: 2px solid rgb(230, 91, 40);
 
   }
 
   #short-about .btn-get-started:hover {
-	background: #ef6603;
+	background: rgb(230, 91, 40);
 	color: #fff;
 	text-decoration: none;
   }
