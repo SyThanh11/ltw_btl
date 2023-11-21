@@ -32,7 +32,7 @@ include_once('views/main/navbar.php');
       <div class="container">
         <div class="section-title" data-aos="zoom-out">
           <h2>Chất lượng</h2>
-          <p>Tại sao lại chọn KMS?</p>
+          <p>Tại sao lại chọn VNG?</p>
         </div>
 
         <div class="row">

@@ -1,22 +1,6 @@
 <?php
   include_once('views/main/navbar.php');
 ?>
-  <!-- ======= Breadcrumbs ======= -->
-  <section id="breadcrumbs" class="breadcrumbs" style="background-color: #1E90FF;">
-    <div class="container">
-
-      <div class="d-flex justify-content-between align-items-center">
-        <h1 style="color: white;"><strong>TIN TỨC</strong></h1>
-        
-        <ol>
-          <li><a style="color: white;" href="index.php?page=main&controller=layouts&action=index">Trang chủ</a></li>
-          <li><a style="color: white;" href="index.php?page=main&controller=blog&action=index">Tin tức</a></li>
-        </ol>
-      </div>
-
-    </div>
-  </section><!-- End Breadcrumbs -->
-
   <main id="main">
     <!-- Modal here -->
     <!-- Modal 1-->
@@ -69,9 +53,9 @@
                             <div id="comment-' . $comment->id . '" class="comment">
                               <div class="d-flex">
                                 <div>
-                                  <h5><a href="">' . $comment->user_name . '</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                                  <h5><a href="">' . $comment->user_name . '</a> <a href="#" style="color: rgb(230, 91, 40)" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
                                   <time>' . date("F j, Y, g:i a", strtotime($comment->date)) . '</time>
-                                  <p>
+                                  <p style="font-weight: 600">
                                   ' . $comment->content . '
                                   </p>
                                 </div>
@@ -84,9 +68,9 @@
                               <div id="comment-' . $comment->id . '-reply-' . $reply->id . '" class="comment comment-reply">
                                 <div class="d-flex">
                                   <div>
-                                    <h5><a href="">' . $reply->user_name . '</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                                    <h5><a href="">' . $reply->user_name . '</a> <a style="color: rgb(230, 91, 40)" href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
                                     <time>' . date("F j, Y, g:i a", strtotime($reply->date)) . '</time>
-                                    <p>
+                                    <p style="font-weight: 600">
                                     ' . $reply->content . '
                                     </p>
                                   </div>
@@ -104,7 +88,9 @@
                                   <textarea name="comment" class="form-control" placeholder="Viết bình luận tại đây"></textarea>
                                 </div>
                               </div>
-                              <button style="background-color: green; color: white;" class="btn btn-primary btn-reply" data-news=' . $news->id . ' data-parent=' . $comment->id .' data-user="' . @$_SESSION["guest"] . '">Gửi bình luận</button>
+                              <div style="display: flex; align-items: center; justify-content: end;">
+                                <button style="background-color: rgb(230, 91, 40); color: white; font-weight: 700" class="btn btn-primary btn-reply" data-news=' . $news->id . ' data-parent=' . $comment->id .' data-user="' . @$_SESSION["guest"] . '">Gửi bình luận</button>
+                              </div>
                             </form>
                           </div></div>';
                           }
@@ -112,13 +98,13 @@
   
                           echo '
                           <div class="reply-form">
-                            <h4>Bình luận</h4>
+                            <h4 style="color: rgb(230, 91, 40)">Bình luận</h4>
                               <div class="row">
                                 <div class="col form-group">
                                   <textarea name="comment" class="form-control" placeholder="Viết bình luận tại đây"></textarea>
                                 </div>
                               </div>
-                              <button style="background-color: #0d6efd; color: white;" class="btn btn-primary btn-comment" data-news=' . $news->id . ' data-parent="" data-user="' . @$_SESSION["guest"] . '">Gửi bình luận</button>
+                              <div style="display: flex; align-items: center; justify-content: end;"><button style="background-color: rgb(230, 91, 40); color: white; font-weight: 700" class="btn btn-primary btn-comment" data-news=' . $news->id . ' data-parent="" data-user="' . @$_SESSION["guest"] . '">Gửi bình luận</button></div>
                             </form>
                           </div>
   
@@ -132,7 +118,7 @@
               </section><!-- End Blog Single Section -->
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
             </div>
           </div>
         </div>
@@ -172,7 +158,7 @@
                       </p>
                       <div class="read-more">
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-' . $news->id . '" id=more' . $news->id . '>
+                        <button type="button" class="btn  btn-entry" data-bs-toggle="modal" data-bs-target="#modal-' . $news->id . '" id=more' . $news->id . '>
                           Đọc thêm
                         </button>
                       </div>
@@ -182,22 +168,22 @@
               }
             ?>
             
-            <div style="margin-top: 20px; margin-left: 30%; position: relative;">
+            <div style="display: flex; align-items: center; justify-content: end;">
             <nav aria-label="Page navigation example">
-              <ul class="pagination" >
+              <ul class="pagination">
                 <li class="page-item">
                   <a class="page-link" href="index.php?page=main&controller=blog&action=index&pg=1" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                    <span class="sr-only">Previous</span>
+                    <span aria-hidden="true" style="color: rgb(230, 91, 40);">&laquo;</span>
+                    <span class="sr-only" style="color: rgb(230, 91, 40);">Previous</span>
                   </a>
                 </li>
-                <li class="page-item"><a class="page-link" href="index.php?page=main&controller=blog&action=index&pg=1">1</a></li>
-                <li class="page-item"><a class="page-link" href="index.php?page=main&controller=blog&action=index&pg=2">2</a></li>
-                <li class="page-item"><a class="page-link" href="index.php?page=main&controller=blog&action=index&pg=3">3</a></li>
+                <li class="page-item" ><a class="page-link" href="index.php?page=main&controller=blog&action=index&pg=1" style="color: rgb(230, 91, 40);">1</a></li>
+                <li class="page-item"><a class="page-link" href="index.php?page=main&controller=blog&action=index&pg=2" style="color: rgb(230, 91, 40);">2</a></li>
+                <li class="page-item"><a class="page-link" href="index.php?page=main&controller=blog&action=index&pg=3" style="color: rgb(230, 91, 40);">3</a></li>
                 <li class="page-item">
                   <a class="page-link" href="index.php?page=main&controller=blog&action=index&pg=2" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                    <span class="sr-only">Next</span>
+                    <span aria-hidden="true" style="color: rgb(230, 91, 40);">&raquo;</span>
+                    <span class="sr-only" style="color: rgb(230, 91, 40);">Next</span>
                   </a>
                 </li>
               </ul>
@@ -209,14 +195,14 @@
 
             <div class="sidebar">
 
-              <h3 class="sidebar-title" style="color: #1E90FF;">Bài viết gần đây</h3>
+              <h3 class="sidebar-title" style="color: #141A46;">Bài viết gần đây</h3>
               <div class="sidebar-item recent-posts">
               <?php
                 foreach ($recent as $news)
                 {
                   echo '
                   <div class="post-item clearfix">
-                    <h4><a href="blog-single.html" data-bs-toggle="modal" data-bs-target="#modal-' . $news->id . '" id=more' . $news->id . '>' . $news->title . '</a></h4>
+                    <h4><a style="color: rgb(230, 91, 40);" href="blog-single.html" data-bs-toggle="modal" data-bs-target="#modal-' . $news->id . '" id=more' . $news->id . '>' . $news->title . '</a></h4>
                     <time>' . date("F j, Y, g:i a", strtotime($news->date)) . '</time>
                   </div>
                   ';

@@ -1,5 +1,5 @@
 .blog {
-  padding: 40px 0 20px 0;
+  padding: 120px 0 20px 0;
 }
 .blog .entry {
   padding: 30px;
@@ -14,15 +14,16 @@
 .blog .entry .entry-title {
   font-size: 28px;
   font-weight: bold;
+  color: rgb(230, 91, 40);
   padding: 0;
   margin: 0 0 20px 0;
 }
 .blog .entry .entry-title a {
-  color: #111;
+  color: rgb(230, 91, 40);
   transition: 0.3s;
 }
 .blog .entry .entry-title a:hover {
-  color: #1E90FF;
+  color: #ae4c05;
 }
 .blog .entry .entry-meta {
   margin-bottom: 15px;
@@ -181,6 +182,7 @@
 }
 .blog .blog-comments .comments-count {
   font-weight: bold;
+  color: rgb(230, 91, 40);
 }
 .blog .blog-comments .comment {
   margin-top: 30px;
@@ -199,6 +201,7 @@
 .blog .blog-comments .comment h5 a {
   font-weight: bold;
   color: #4d4643;
+  color: rgb(230, 91, 40);
   transition: 0.3s;
 }
 .blog .blog-comments .comment h5 a:hover {
@@ -360,10 +363,6 @@
 .blog .sidebar .recent-posts .post-item + .post-item {
   margin-top: 15px;
 }
-/* .blog .sidebar .recent-posts img {
-  width: 80px;
-  float: left;
-} */
 .blog .sidebar .recent-posts h4 {
   font-size: 15px;
   font-weight: bold;
@@ -409,4 +408,28 @@
   padding-left: 5px;
   color: #aaaaaa;
   font-size: 14px;
+}
+.blog .btn-entry {
+  background-color: rgb(230, 91, 40);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: 0.3s;
+  border: 1px solid rgb(230, 91, 40);
+}
+.blog .btn-entry:hover{
+  background-color: rgb(160, 64, 29);
+  border: 1px solid rgb(160, 64, 29);
+}
+.btn-check:focus+.btn, .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(233, 129, 92);
+}
+
+.pagination a:hover{
+  background-color: rgb(230, 91, 40);
+  color: #fff!important;
+}
+.pagination a:hover span{
+  color: #ffffff!important;
 }

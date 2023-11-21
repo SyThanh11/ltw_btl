@@ -2,28 +2,13 @@
   include_once('views/main/navbar.php');
 ?>
   <main id='main'>
-     <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs"  style="background-color: #1E90FF;">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h1 style="color: white;"><strong>THÀNH TỰU</strong></h1>
-          <ol>
-            <li><a style="color: white;" href="index.php?page=main&controller=layouts&action=index">Trang chủ</a></li>
-            <li><a style="color: white;" href="index.php?page=main&controller=archive&action=index">Thành tựu</a></li>
-          </ol>
-        </div>
-
-      </div>
-    </section><!-- End Breadcrumbs -->
-
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
-      <div class="container">
+      <div class="container" style="margin-top: 70px">
 
         <div class="section-title" data-aos="zoom-out">
           <h2>Thành tựu</h2>
-          <p>KMS đã đạt được gì?</p>
+          <p>VNG đã đạt được gì?</p>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up">
