@@ -15,12 +15,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>KMS Technology - Bright Minds, Brilliant Solutions</title>
+  <title>VNG Corporation - Công ty Cổ phần VNG</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="https://kms-technology.com/wp-content/uploads/2018/10/favicon.png" rel="icon">
+  <link href="https://corp.vcdn.vn/products/vng/icon_fav_vng.ico?fbclid=IwAR0h1PuAfP2FuJMzcW66Wk-3rPsq8HnvEmeg5ttZjv3-jgynNeyZdfWO5T8" rel="icon">
   <link href="public/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
