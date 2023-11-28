@@ -1,5 +1,8 @@
 <?php
 require_once('connection.php');
+
+$salt = 'abcdefgh';
+
 class User
 {
     public $email;
@@ -7,20 +10,20 @@ class User
     public $fname;
     public $lname;
     public $gender;
-    public $age;
+    public $birthday;
     public $phone;
     public $createAt;
     public $updateAt;
     public $password;
 
-    public function __construct($email, $profile_photo, $fname, $lname, $gender, $age, $phone, $createAt, $updateAt, $password)
+    public function __construct($email, $profile_photo, $fname, $lname, $gender, $birthday, $phone, $createAt, $updateAt, $password)
     {
         $this->email = $email;
         $this->profile_photo = $profile_photo;
         $this->fname = $fname;
         $this->lname = $lname;
         $this->gender = $gender;
-        $this->age = $age;
+        $this->birthday = $birthday;
         $this->phone = $phone;
         $this->createAt = $createAt;
         $this->updateAt = $updateAt;
@@ -42,7 +45,7 @@ class User
                 $user['fname'],
                 $user['lname'],
                 $user['gender'],
-                $user['age'],
+                $user['birthday'],
                 $user['phone'],
                 $user['createAt'],
                 $user['updateAt'],
@@ -57,7 +60,7 @@ class User
         $db = DB::getInstance();
         $req = $db->query(
             "
-            SELECT email, profile_photo, fname, lname, gender, age, phone, createAt, updateAt 
+            SELECT email, profile_photo, fname, lname, gender, birthday, phone, createAt, updateAt 
             FROM user
             WHERE email = '$email'
             ;"
@@ -75,7 +78,7 @@ class User
             $result['fname'],
             $result['lname'],
             $result['gender'],
-            $result['age'],
+            $result['birthday'],
             $result['phone'],
             $result['createAt'],
             $result['updateAt'],
@@ -86,14 +89,14 @@ class User
     }
     
 
-    static function insert($email, $profile_photo, $fname, $lname, $gender, $age, $phone, $password)
+    static function insert($email, $profile_photo, $fname, $lname, $gender, $birthday, $phone, $password)
     {
-        $password = password_hash($password, PASSWORD_DEFAULT);
+        $password_hash = password_hash($password . $salt, PASSWORD_DEFAULT);
         $db = DB::getInstance();
         $req = $db->query(
             "
-            INSERT INTO user (email, profile_photo, fname, lname, gender, age, phone, createAt, updateAt, password)
-            VALUES ('$email', '$profile_photo', '$fname', '$lname', $gender, $age, '$phone', NOW(), NOW(), '$password')
+            INSERT INTO user (email, profile_photo, fname, lname, gender, birthday, phone, createAt, updateAt, password)
+            VALUES ('$email', '$profile_photo', '$fname', '$lname', $gender, $birthday, '$phone', NOW(), NOW(), '$password_hash')
             ;");
         return $req;
     }
@@ -105,13 +108,13 @@ class User
         return $req;
     }
 
-    static function update($email, $profile_photo, $fname, $lname, $gender, $age, $phone)
+    static function update($email, $profile_photo, $fname, $lname, $gender, $birthday, $phone)
     {
         $db = DB::getInstance();
         $req = $db->query(
             "
             UPDATE user
-            SET profile_photo = '$profile_photo', fname = '$fname', lname = '$lname', gender = $gender, age = $age, phone = '$phone', updateAt = NOW()
+            SET profile_photo = '$profile_photo', fname = '$fname', lname = '$lname', gender = $gender, birthday = $birthday, phone = '$phone', updateAt = NOW()
             WHERE email = '$email'
             ;"
         );
@@ -122,7 +125,7 @@ class User
     {
         $db = DB::getInstance();
         $req = $db->query("SELECT * FROM user WHERE email = '$email'");
-        if (@password_verify($password, $req->fetch_assoc()['password']))
+        if (@password_verify($password . $salt, $req->fetch_assoc()['password']))
             return true;
         else
             return false;
@@ -150,11 +153,11 @@ class User
     static function changePassword($email, $oldpassword, $newpassword)
     {
         if (User::validation($email, $oldpassword)) {
-            $password = password_hash($newpassword, PASSWORD_DEFAULT);
+            $password_hash = password_hash($newpassword, PASSWORD_DEFAULT);
             $db = DB::getInstance();
             $req = $db->query(
                 "UPDATE user
-                SET password = '$password', updateAt = NOW()
+                SET password = '$password_hash', updateAt = NOW()
                 WHERE email = '$email';");
             return $req;
         } else {
@@ -164,11 +167,11 @@ class User
 
     static function changePassword_($email, $newpassword)
     {
-        $password = password_hash($newpassword, PASSWORD_DEFAULT);
+        $password_hash = password_hash($newpassword . $salt, PASSWORD_DEFAULT);
         $db = DB::getInstance();
         $req = $db->query(
             "UPDATE user
-            SET password = '$password', updateAt = NOW()
+            SET password = '$password_hash', updateAt = NOW()
             WHERE email = '$email';");
         return $req;
     }

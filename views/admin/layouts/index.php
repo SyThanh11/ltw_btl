@@ -41,7 +41,7 @@ require_once('views/admin/content_layouts.php'); ?>
 					<div class="col-sm-6 invoice-col">
 						<ul style="list-style: none;">
 							<?php
-								if($_SESSION['init'] == 1){
+								if($_SESSION['role'] == 1){
 									echo '
 									<li>
 										<a href="index.php?page=admin&controller=admin&action=index">

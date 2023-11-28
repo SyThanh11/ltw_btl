@@ -1,36 +1,38 @@
 <?php
 require_once('connection.php');
+
+$salt = 'abcdefgh';
 class Admin
 {
     public $username;
     public $password;
     public $createAt;
     public $updateAt;
-    public $init=0;
+    public $role=0;
 
-    public function __construct($username, $password, $init, $createAt, $updateAt)
+    public function __construct($username, $password, $role, $createAt, $updateAt)
     {
         $this->username = $username;
         $this->password = $password;
         $this->createAt = $createAt;
         $this->updateAt = $updateAt;
-        $this->init = $init;
+        $this->role = $role;
 
     }
 
     static function insert($username, $password)
     {
-        $password = password_hash($password, PASSWORD_DEFAULT);
+        $password_hash = password_hash($password . $salt, PASSWORD_DEFAULT);
         $db = DB::getInstance();
-        $req = $db->query("INSERT INTO admin (username, password, init, createAt, updateAt) VALUES ('$username', '$password', 0, NOW(), NOW());");
+        $req = $db->query("INSERT INTO admin (username, password, role, createAt, updateAt) VALUES ('$username', '$password_hash', 0, NOW(), NOW());");
         return $req;
     }
 
     static function getInit($username){
         $db = DB::getInstance();
-        $req = $db->query("SELECT init FROM admin WHERE username = '$username'");
+        $req = $db->query("SELECT role FROM admin WHERE username = '$username'");
         $result = $req->fetch_assoc();
-        return $result['init'];
+        return $result['role'];
     }
 
 
@@ -45,7 +47,7 @@ class Admin
     {
         $db = DB::getInstance();
         $req = $db->query("SELECT * FROM admin WHERE username = '$username'");
-        if (@password_verify($password, $req->fetch_assoc()['password']))
+        if (@password_verify($password . $salt, $req->fetch_assoc()['password']))
             return true;
         else
             return false;
@@ -54,11 +56,11 @@ class Admin
     static function changePassword($username, $oldpassword, $newpassword)
     {
         if (Admin::validation($username, $oldpassword)) {
-            $password = password_hash($newpassword, PASSWORD_DEFAULT);
+            $password_hash = password_hash($newpassword . $salt, PASSWORD_DEFAULT);
             $db = DB::getInstance();
             $req = $db->query(
                 "UPDATE admin
-                SET password = '$password', updateAt = NOW()
+                SET password = '$password_hash', updateAt = NOW()
                 WHERE username = '$username';"
             );
             return $req;
@@ -69,11 +71,11 @@ class Admin
 
     static function changePassword_($username, $newpassword)
     {
-        $password = password_hash($newpassword, PASSWORD_DEFAULT);
+        $password_hash = password_hash($newpassword . $salt, PASSWORD_DEFAULT);
         $db = DB::getInstance();
         $req = $db->query(
             "UPDATE admin
-            SET password = '$password', updateAt = NOW()
+            SET password = '$password_hash', updateAt = NOW()
             WHERE username = '$username';"
         );
         return $req;
@@ -90,7 +92,7 @@ class Admin
                 $admin['password'],
                 $admin['createAt'],
                 $admin['updateAt'],
-                $admin['init']
+                $admin['role']
             );
         }
         return $admins;

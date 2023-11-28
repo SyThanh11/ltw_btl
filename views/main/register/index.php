@@ -65,8 +65,8 @@
 						<span class="focus-input100"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Age is required">
-						<input class="input100" type="text" name="age" placeholder="Tuổi">
+					<div class="wrap-input100 validate-input" data-validate="Birthday is required">
+						<input class="input100" type="text" name="birthday" placeholder="Năm sinh">
 						<span class="focus-input100"></span>
 					</div>
 

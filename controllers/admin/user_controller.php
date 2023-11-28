@@ -20,12 +20,12 @@ class UserController extends BaseController
 	{
 		$fname = $_POST['fname'];
 		$lname = $_POST['lname'];
-		$age = $_POST['age'];
+		$birthday = $_POST['birthday'];
 		$gender = $_POST['gender'];
 		$phone = $_POST['phone'];
 		$email = $_POST['email'];
 		$password = $_POST['password'];
-		echo $fname . $lname . $age . $gender . $phone . $email . $password;
+		echo $fname . $lname . $birthday . $gender . $phone . $email . $password;
 		// Photo
 		$target_dir = "public/img/user/";
 		$path = $_FILES['fileToUpload']['name'];
@@ -53,7 +53,7 @@ class UserController extends BaseController
 		}
 		move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
 		// Add new
-		$add_new = User::insert($email, $target_file, $fname, $lname, $gender, $age, $phone, $password);
+		$add_new = User::insert($email, $target_file, $fname, $lname, $gender, $birthday, $phone, $password);
 		header('Location: index.php?page=admin&controller=user&action=index');
 	}
 
@@ -63,7 +63,7 @@ class UserController extends BaseController
 		$fname = $_POST['fname'];
 		$lname = $_POST['lname'];
 		$gender = $_POST['gender'];
-		$age = $_POST['age'];
+		$birthday = $_POST['birthday'];
 		$phone = $_POST['phone'];
 		$urlcurrent = $_POST['img'];
 		// Photo
@@ -94,7 +94,7 @@ class UserController extends BaseController
 		unlink($file_pointer);
 		move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
 		// Update
-		$change_info = User::update($email, $target_file, $fname, $lname, $gender, $age, $phone);
+		$change_info = User::update($email, $target_file, $fname, $lname, $gender, $birthday, $phone);
 		header('Location: index.php?page=admin&controller=user&action=index');
 	}
 
