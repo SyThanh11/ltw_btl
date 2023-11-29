@@ -8,7 +8,7 @@ $pages = array(
 $controllers_main = array(
   //Main controller
   'about' => ['index'],
-  'blog' => ['index'],
+  //'blog' => ['index'],
   'archive' => ['index'],
   'contact' => ['index'],
   'blog' => ['index', 'comment', 'reply'],
@@ -46,7 +46,7 @@ $controllers = array(
 
   //Main controller
   'about' => ['index'],
-  'blog' => ['index'],
+    //'blog' => ['index'],
   'archive' => ['index'],
   'contact' => ['index'],
   'blog' => ['index', 'comment', 'reply'],
