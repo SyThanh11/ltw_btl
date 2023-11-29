@@ -54,7 +54,7 @@ $(".btn-comment")
         news = $(this).data("news");
     }
     var parent = $(this).data("parent");
-    var content = $(this).parent().find("textarea").val();
+    var content = $(this).parent().parent().find("textarea").val();
     $.ajax
     ({
         type:'post',
