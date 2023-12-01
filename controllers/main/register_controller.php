@@ -16,7 +16,7 @@ class RegisterController extends BaseController
 
 	public function submit()
 {
-	$requiredFields = ['fname', 'lname', 'age', 'gender', 'phone', 'email', 'pass'];
+	$requiredFields = ['fname', 'lname', 'birthday', 'gender', 'phone', 'email', 'pass'];
 
 	foreach ($requiredFields as $field) {
 		if (empty($_POST[$field])) {
@@ -31,14 +31,14 @@ class RegisterController extends BaseController
 
 	$fname = $_POST['fname'];
 	$lname = $_POST['lname'];
-	$age = $_POST['age'];
+	$birthday = $_POST['birthday'];
 	$gender = isset($_POST['gender']) ? $_POST['gender'] : null;
 	$phone = $_POST['phone'];
 	$email = $_POST['email'];
 	$password = $_POST['pass'];
 
 	if (User::validateRegister($email)) {
-		User::insert($email, 'public/img/user/default.png', $fname, $lname, $gender, $age, $phone, $password);
+		User::insert($email, 'public/img/user/default.png', $fname, $lname, $gender, $birthday, $phone, $password);
 
 		header('Location: index.php?page=main&controller=login&action=index');
 		exit();
@@ -61,7 +61,7 @@ class RegisterController extends BaseController
 		$fname = $_POST['fname'];
 		$lname = $_POST['lname'];
 		$gender = $_POST['gender'];
-		$age = $_POST['age'];
+		$birthday = $_POST['birthday'];
 		$phone = $_POST['phone'];
 		$urlcurrent = $_POST['img'];
 		// Photo
@@ -92,7 +92,7 @@ class RegisterController extends BaseController
 		unlink($file_pointer);
 		move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
 		// Update
-		$change_info = User::update($email, $target_file, $fname, $lname, $gender, $age, $phone);
+		$change_info = User::update($email, $target_file, $fname, $lname, $gender, $birthday, $phone);
 		header('Location: index.php?page=main&controller=layouts&action=index');
 	}
 

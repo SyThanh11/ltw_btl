@@ -81,8 +81,8 @@
             <div class="row" style="margin-top: 5%;">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label>Tuổi</label>
-                  <input class="form-control" type="number" placeholder="Tuổi" name="age" value="' . $data->age . '"/>
+                  <label>Năm sinh</label>
+                  <input class="form-control" type="number" placeholder="Năm sinh" name="birthday" value="' . $data->birthday . '"/>
                 </div>
               </div>
               <div class="col-md-6">

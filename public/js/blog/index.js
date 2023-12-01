@@ -34,7 +34,7 @@ $(".btn-reply")
             }
             else 
             {
-                alert('Cannot insert! Please try again or log in.');
+                alert('Cannot insert! Please try again or log in. The problem is' + response);
             }
     }});
 });
@@ -43,7 +43,7 @@ $(".btn-comment")
 .click(function (e)
 {
     var user = $(this).data("user");
-    
+    console.log("HERE");
     var news;
     if ($(this).data("news") == '')
     {
@@ -66,6 +66,7 @@ $(".btn-comment")
             user_id: user
         },
         success:function(response) {
+            console.log(response);
             if (response == 'success')
             {
                 $("#block").load(location.href+` #block>*`,"");
@@ -74,7 +75,7 @@ $(".btn-comment")
             }
             else 
             {
-                alert('Cannot insert! Please try again or log in.');
+                alert('Cannot insert! Please try again or log in. The problem is' + response);
             }
     }});
 });

@@ -22,7 +22,7 @@ class LoginController extends BaseController
 		$check = Admin::validation($username, $password);
 		if ($check == 1) {
 			session_start();
-			$_SESSION["init"] = Admin::getInit($username);
+			$_SESSION["role"] = Admin::getInit($username);
 			if (!isset($_SESSION["user"]))
 				$_SESSION["user"] = $username;
 			

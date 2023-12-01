@@ -73,8 +73,8 @@ require_once('views/admin/content_layouts.php'); ?>
 												<div class="row">
 													<div class="col-md-6">
 														<div class="form-group">
-															<label>Tuổi</label>
-															<input class="form-control" type="number" placeholder="Tuổi" name="age" />
+															<label>Năm sinh</label>
+															<input class="form-control" type="number" placeholder="Năm sinh" name="birthday" />
 														</div>
 													</div>
 													<div class="col-md-6">
@@ -134,7 +134,7 @@ require_once('views/admin/content_layouts.php'); ?>
 										<th>Họ và tên lót</th>
 										<th>Tên</th>
 										<th>Giới tính</th>
-										<th>Tuổi</th>
+										<th>Năm sinh</th>
 										<th>Số điện thoại</th>
 										<th>Email</th>
 										<th>Thao tác</th>
@@ -149,11 +149,11 @@ require_once('views/admin/content_layouts.php'); ?>
 										echo "<td>" . $user->fname . "</td>";
 										echo "<td>" . $user->lname . "</td>";
 										echo "<td>" . (($user->gender == 1) ? "Nam" : "Nữ") . "</td>";
-										echo "<td>" . $user->age . "</td>";
+										echo "<td>" . $user->birthday . "</td>";
 										echo "<td>" . $user->phone . "</td>";
 										echo "<td>" . $user->email . "</td>";
 										echo "<td>
-											<btn data-toggle='tooltip' data-placement='top' title='Chỉnh sửa' class='btn-edit btn btn-primary btn-xs' style='margin-right: 5px' data-email='$user->email' data-fname='$user->fname' data-lname='$user->lname' data-gender='$user->gender' data-age='$user->age' data-phone='$user->phone' data-img='$user->profile_photo'> <i class='fas fa-edit'></i></btn>
+											<btn data-toggle='tooltip' data-placement='top' title='Chỉnh sửa' class='btn-edit btn btn-primary btn-xs' style='margin-right: 5px' data-email='$user->email' data-fname='$user->fname' data-lname='$user->lname' data-gender='$user->gender' data-birthday='$user->birthday' data-phone='$user->phone' data-img='$user->profile_photo'> <i class='fas fa-edit'></i></btn>
 											<btn data-toggle='tooltip' data-placement='top' title='Đổi mật khẩu' class='btn-changepass btn btn-warning btn-xs' style='margin-right: 5px' data-email='$user->email'> <i class='fas fa-lock'></i></btn>
 											<btn data-toggle='tooltip' data-placement='top' title='Xóa tài khoản' class='btn-delete btn btn-danger btn-xs' style='margin-right: 5px' data-email='$user->email' data-img='$user->profile_photo'> <i class='fas fa-trash'></i></btn>
 											</td>";
@@ -193,8 +193,8 @@ require_once('views/admin/content_layouts.php'); ?>
 												<div class="row">
 													<div class="col-md-6">
 														<div class="form-group">
-															<label>Tuổi</label>
-															<input class="form-control" type="number" placeholder="Tuổi" name="age" />
+															<label>Năm sinh</label>
+															<input class="form-control" type="number" placeholder="Năm sinh" name="birthday" />
 														</div>
 													</div>
 													<div class="col-md-6">
