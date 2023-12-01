@@ -37,9 +37,8 @@
 			</a></h3> -->
 
 			<a href="index.php?page=admin&controller=layouts&action=index" class="brand-link" >
-				<img class="brand-image img-circle elevation-3" src="https://kms-technology.com/wp-content/uploads/2018/10/favicon.png" alt="KMS Logo" style="opacity: .8">
-				<span class="brand-text font-weight-light" style="margin-left: 5px;"><strong>KMS</strong></span>
-				<span class="brand-text font-weight-light" style="color: #00BFFF;"><strong>Technology</strong></span>
+				<span class="brand-text font-weight-light" style="margin-left: 5px;"><strong>VNG</strong></span>
+				<span class="brand-text font-weight-light" style=""><strong>Corporation</strong></span>
 			</a>
 			<!-- Sidebar-->
 			<div class="sidebar">
@@ -48,7 +47,7 @@
 					echo ('
 							<div class="info" style="margin:auto;">
 								<a href="#" class="d-block style="color:#000000;">
-									Xin chào 
+									Xin chào, 
 						'
 						. $_SESSION["user"] .
 						' </a>
