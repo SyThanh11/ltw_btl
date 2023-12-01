@@ -1,3 +1,9 @@
-Account admin:
+Cách import database: 
+
+1. Truy cập phpMyAdmin; 
+2. Bấm vào database "web" (hoặc database khác, sau đó đổi tên thành "web") 
+3. Import database.sql
+
+Account admins:
 + admin: 123456
 + sythanh: 123456

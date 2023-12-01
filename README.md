@@ -5,12 +5,9 @@
 - [x] Design lại trang Login + Register cho đẹp hơn (Sỹ Thành)
 - [x] Xử lí exceptions, error page (Khang)
 - [ ] Page admin (Vương):
-	- [ ] Đổi logo, copyright, database theo cty mới
+	- [x] Đổi logo, copyright, database theo cty mới (Hào)
 	- [ ] Design lại trang admin cho đẹp hơn (nếu cần)
-	- [ ] Thêm tính năng (optional):
-		+ Thống kê (views, cmt tính cực/tiêu cực, thời lượng truy cập...)
-		+ Tạo report
-	- [ ] Sửa tính năng "Đổi mật khẩu khách hàng": Ko cần nhập mật khẩu hiện tại?
+	- [x] Sửa tính năng "Đổi mật khẩu khách hàng": Ko cần nhập mật khẩu hiện tại? (Hào)
 
 # REPORT (Hào)
 - [x] Vẽ ERD + lược đồ CSDL

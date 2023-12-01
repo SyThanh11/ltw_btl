@@ -4,9 +4,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>KMS Technoloy | Log in</title>
+	<title>VNG Corporation | Log in</title>
 
-	<link href="https://kms-technology.com/wp-content/uploads/2018/10/favicon.png" rel="icon">
+	<link href="https://corp.vcdn.vn/products/vng/icon_fav_vng.ico?fbclid=IwAR0h1PuAfP2FuJMzcW66Wk-3rPsq8HnvEmeg5ttZjv3-jgynNeyZdfWO5T8" rel="icon">
 
 	<!-- Google Font: Source Sans Pro-->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">

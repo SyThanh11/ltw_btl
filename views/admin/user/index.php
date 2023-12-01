@@ -255,10 +255,10 @@ require_once('views/admin/content_layouts.php'); ?>
 													<input class="form-control" type="text" placeholder="Email" name="email" readonly />
 												</div>
 
-												<div class="form-group">
+												<!-- <div class="form-group">
 													<label> Password hiện tại</label>
 													<input class="form-control" type="password" placeholder="Please enter your new password" name="current-password" />
-												</div>
+												</div> -->
 
 												<div class="form-group">
 													<label>Password mới</label>

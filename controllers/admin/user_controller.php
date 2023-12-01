@@ -101,9 +101,8 @@ class UserController extends BaseController
 	public function editPass()
 	{
 		$email = $_POST['email'];
-		$currentPassword = $_POST['current-password'];
-		$check = User::validation($email, $currentPassword);
-		if($check==1)
+		$check = 1;
+		if($check===1)
 		{
 			$newpassword = $_POST['new-password'];
 			$change_pass = User::changePassword_($email, $newpassword);
