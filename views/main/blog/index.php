@@ -1,3 +1,12 @@
+<head>
+  <style>
+      .pagination .page-item.active .page-link {
+          background-color: rgb(230, 91, 40);
+          color: white!important;
+          border-color: rgb(230, 91, 40);
+      }
+  </style>
+</head>
 <?php
   include_once('views/main/navbar.php');
 ?>
@@ -136,7 +145,6 @@
           <div class="col-lg-8 entries">
             <!-- Entry -->
             <?php
-
               foreach ($newses as $news) {
                 echo '
                   <article class="entry">
@@ -171,24 +179,34 @@
             <div style="display: flex; align-items: center; justify-content: end;">
             <nav aria-label="Page navigation example">
               <ul class="pagination">
-                <li class="page-item">
-                  <a class="page-link" href="index.php?page=main&controller=blog&action=index&pg=1" aria-label="Previous">
-                    <span aria-hidden="true" style="color: rgb(230, 91, 40);">&laquo;</span>
-                    <span class="sr-only" style="color: rgb(230, 91, 40);">Previous</span>
-                  </a>
-                </li>
-                <li class="page-item" ><a class="page-link" href="index.php?page=main&controller=blog&action=index&pg=1" style="color: rgb(230, 91, 40);">1</a></li>
-                <li class="page-item"><a class="page-link" href="index.php?page=main&controller=blog&action=index&pg=2" style="color: rgb(230, 91, 40);">2</a></li>
-                <li class="page-item"><a class="page-link" href="index.php?page=main&controller=blog&action=index&pg=3" style="color: rgb(230, 91, 40);">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="index.php?page=main&controller=blog&action=index&pg=2" aria-label="Next">
-                    <span aria-hidden="true" style="color: rgb(230, 91, 40);">&raquo;</span>
-                    <span class="sr-only" style="color: rgb(230, 91, 40);">Next</span>
-                  </a>
-                </li>
+                  <?php
+                  if ($currentPage > 1) {
+                      echo '<li class="page-item">
+                              <a class="page-link" href="index.php?page=main&controller=blog&action=index&pg=' . ($currentPage - 1) . '" aria-label="Previous" style="border: 1px solid rgb(230, 91, 40); overflow: hidden;">
+                                  <span aria-hidden="true" style="color: rgb(230, 91, 40);">&laquo;</span>
+                                  <span class="sr-only" style="color: rgb(230, 91, 40);">Previous</span>
+                              </a>
+                            </li>';
+                  }
+
+                  for ($i = 1; $i <= $totalPages; $i++) {
+                      echo '<li class="page-item ' . ($i == $currentPage ? 'active' : '') . '">';
+                      echo '<a class="page-link" href="index.php?page=main&controller=blog&action=index&pg=' . $i . '" style="color: rgb(230, 91, 40); border: 1px solid rgb(230, 91, 40); overflow: hidden;">' . $i . '</a>';
+                      echo '</li>';
+                  }
+
+                  if ($currentPage < $totalPages) {
+                      echo '<li class="page-item">
+                              <a class="page-link" href="index.php?page=main&controller=blog&action=index&pg=' . ($currentPage + 1) . '" aria-label="Next" style="border: 1px solid rgb(230, 91, 40); overflow: hidden;">
+                                  <span aria-hidden="true" style="color: rgb(230, 91, 40);">&raquo;</span>
+                                  <span class="sr-only" style="color: rgb(230, 91, 40);">Next</span>
+                              </a>
+                            </li>';
+                  }
+                  ?>
               </ul>
-            </nav>
-            </div>
+          </nav>
+</div>
 
           </div>
           <div class="col-lg-4">
