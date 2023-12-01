@@ -13,39 +13,57 @@
 
         <div class="row portfolio-container" data-aos="fade-up">
           <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="https://blog.kms-solutions.asia/hubfs/Telecommunication%20and%20ICT%20-%20KMS%20Solutions.jpg" style="width: 1024px; height: 280px;" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="//corp.vcdn.vn/upload/vng/source/Gallery/Gi%E1%BA%A3i%20th%C6%B0%E1%BB%9Fng/HR%20ASIA%20AWARDS.jpg" style="width: 1024px; height: 280px;" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Giải thưởng Fast Enterprise tại APEA</h4>
-              <p>2021</p>
-              <a href="https://blog.kms-solutions.asia/hubfs/Telecommunication%20and%20ICT%20-%20KMS%20Solutions.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Cuối tháng 12/2021, KMS Solutions được gọi tên tại giải thưởng APEA danh giá ở hạng mục “Doanh nghiệp Tăng trưởng nhanh” cùng với Nova Consumer Group, SCB, Yuanta Securities, và Danh Khoi Group. Được biết, để nhận được đề cử trên, KMS phải trải qua nhiều vòng đánh giá gắt gao dựa trên các tiêu chí như chiến lược phát triển, năng lực lãnh đạo, mức tăng trưởng doanh thu, và trách nhiệm cộng đồng."><i class="bx bx-plus"></i></a>
+              <h4>HR Asia Award</h4>
+              <p>2020</p>
+              <a href="//corp.vcdn.vn/products/upload/vng/source/Gallery/Gi%E1%BA%A3i%20th%C6%B0%E1%BB%9Fng/106499612_3003214393065921_4152246659094849368_n.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title=""><i class="bx bx-plus"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="https://www.kms-technology.com/wp-content/uploads/2021/04/processed-1024x691.jpeg" style="width: 1024px; height: 280px;" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="//corp.vcdn.vn/products/upload/vng/source/Gallery/Gi%E1%BA%A3i%20th%C6%B0%E1%BB%9Fng/96091488_2864689250251770_9112965414270271488_n.jpg" style="width: 1024px; height: 280px;" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Giải thưởng Sao Khuê</h4>
-              <p>2021</p>
-              <a href="https://www.kms-technology.com/wp-content/uploads/2021/04/processed-1024x691.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="2021 đánh dấu năm thứ 10 KMS được chọn là “ngôi sao” của chuyển đổi số Việt Nam tại lễ trao giải Sao Khuê—một trong những giải thưởng lâu đời, uy tín, và cao quý nhất của ngành CNTT Việt Nam."><i class="bx bx-plus"></i></a>
+              <h4>Best Employer Branding Anphabe Award</h4>
+              <p>2020</p>
+              <a href="https://corp.vcdn.vn/products/upload/vng/source/Gallery/Gi%E1%BA%A3i%20th%C6%B0%E1%BB%9Fng/96234030_2864689490251746_6345786906797670400_n.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Giải thưởng “Best Employer Branding Anphabe Award”"><i class="bx bx-plus"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="https://static.recruitery.co/uploads/images/Doanh%20nghi%E1%BB%87p%20n%C3%A0o%20%C4%91ang%20tuy%E1%BB%83n%20tr%C3%AAn%20Recruitery%20thu%E1%BB%99c%20TOP%20115%20n%C6%A1i%20l%C3%A0m%20vi%E1%BB%87c%20t%E1%BB%91t%20nh%E1%BA%A5t%20Ch%C3%A2u%20%C3%81%202021%20-%20Recruitery_20211012155421.jpeg" style="width: 1024px; height: 280px;" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="//corp.vcdn.vn/products/upload/vng/source/Gallery/Gi%E1%BA%A3i%20th%C6%B0%E1%BB%9Fng/N%C6%A1i%20l%C3%A0m%20vi%E1%BB%87c%20t%E1%BB%91t%20nh%E1%BA%A5t%20Vi%E1%BB%87t%20Nam.jpg" style="width: 1024px; height: 280px;" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Nơi làm việc tốt nhất Châu Á</h4>
-              <p>2021</p>
-              <a href="https://static.recruitery.co/uploads/images/Doanh%20nghi%E1%BB%87p%20n%C3%A0o%20%C4%91ang%20tuy%E1%BB%83n%20tr%C3%AAn%20Recruitery%20thu%E1%BB%99c%20TOP%20115%20n%C6%A1i%20l%C3%A0m%20vi%E1%BB%87c%20t%E1%BB%91t%20nh%E1%BA%A5t%20Ch%C3%A2u%20%C3%81%202021%20-%20Recruitery_20211012155421.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Năm 2021, KMS vượt qua 581 hồ sơ doanh nghiệp ở Việt Nam để nhận giải thưởng “Best Companies to Work for in Asia - Nơi làm việc tốt nhất châu Á”, một để cử quốc tế, được HR Asia tổ chức thường niên nhằm đánh giá trải nghiệm nhân viên và vinh danh những môi trường làm việc hàng đầu trong khu vực."><i class="bx bx-plus"></i></a>
+              <h4>Best Places To Work Anphabe Award</h4>
+              <p>2020</p>
+              <a href="//corp.vcdn.vn/products/upload/vng/source/Gallery/Gi%E1%BA%A3i%20th%C6%B0%E1%BB%9Fng/122838873_3337850999602257_3600930665593047535_n.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Giải thưởng “Best Places To Work Anphabe Award”"><i class="bx bx-plus"></i></a>
             </div>
           </div>
 
           
           <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="http://www.vinasa.org.vn/Anhdaidien/vt-fpt-1403-9425.jpg" style="width: 1024px; height: 280px;" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="//corp.vcdn.vn/products/upload/vng/source/Gallery/Gi%E1%BA%A3i%20th%C6%B0%E1%BB%9Fng/117295447_3102323709821655_4904579306838218041_n.jpg" style="width: 1024px; height: 280px;" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Top 10 doanh nghiệp ICT Việt Nam</h4>
-              <p>2021</p>
-              <a href="http://www.vinasa.org.vn/Anhdaidien/vt-fpt-1403-9425.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Giải thưởng “Top 10 doanh nghiệp ICT 2021” vinh danh KMS tại đề cử “Doanh nghiệp Gia công Xuất khẩu Phần mềm Hàng đầu Việt Nam”."><i class="bx bx-plus"></i></a>
+              <h4>Top 10 Doanh nghiệp tiêu biểu ASEAN</h4>
+              <p>2020</p>
+              <a href="//corp.vcdn.vn/products/upload/vng/source/Gallery/Gi%E1%BA%A3i%20th%C6%B0%E1%BB%9Fng/117295447_3102323709821655_4904579306838218041_n.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Giải thưởng “Top 10 Doanh nghiệp tiêu biểu ASEAN 2020”"><i class="bx bx-plus"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="//corp.vcdn.vn/products/upload/vng/source/Gallery/Gi%E1%BA%A3i%20th%C6%B0%E1%BB%9Fng/82159175_2612278105492887_7259740077482311680_n.jpg" style="width: 1024px; height: 280px;" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Top 20 Nhãn hiệu hàng đầu</h4>
+              <p>2019</p>
+              <a href="//corp.vcdn.vn/products/upload/vng/source/Gallery/Gi%E1%BA%A3i%20th%C6%B0%E1%BB%9Fng/82159175_2612278105492887_7259740077482311680_n.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Giải thưởng “Top 20 Nhãn hiệu hàng đầu 2019”"><i class="bx bx-plus"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="//corp.vcdn.vn/products/upload/vng/source/Gallery/Gi%E1%BA%A3i%20th%C6%B0%E1%BB%9Fng/27747593_405682486544404_929177013684182718_o.jpg" style="width: 1024px; height: 280px;" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Top 10 Publisher Award</h4>
+              <p>2017</p>
+              <a href="//corp.vcdn.vn/products/upload/vng/source/Gallery/Gi%E1%BA%A3i%20th%C6%B0%E1%BB%9Fng/27788647_405682463211073_2801921266635506842_o.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Giải thưởng “Top 10 Publisher Award 2017”"><i class="bx bx-plus"></i></a>
             </div>
           </div>
 
