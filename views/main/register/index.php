@@ -109,7 +109,7 @@
 					<div class="container-login100-form-btn">
 						<input class="login100-form-btn" 
 						name="submit-btn-resgister"
-						type="submit" style="background-color: #e65a26; font-size: 20px; font-weight: bold;" value="Đăng ký tài khoản">
+						type="submit" style="background-color: #e65a26; font-size: 20px; font-weight: bold;" value="Đăng ký">
 					</div>
 				</form>
 			</div>
