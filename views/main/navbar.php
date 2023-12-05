@@ -135,9 +135,12 @@
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
       <div class="logo">
-        <h1 class="logo me-auto"><a href="index.php?page=main&controller=layouts&action=index">
-        <span style="font-weight: 700; font-size: 40px;" >VNG</span>
-        <span style="color: #141A46; font-weight: 700; font-size: 30px"> CORPORATION</span></a></h1>
+        <h1 class="logo me-auto">
+          <a href="index.php?page=main&controller=layouts&action=index" style="display: flex; flex-direction: row; align-items: center;">
+            <span style="font-weight: 700; font-size: 40px; margin-right: 5px;" >VNG</span>
+            <span style="color: #141A46; font-weight: 700; font-size: 30px; margin-top: 7px"> CORPORATION</span>
+          </a>
+        </h1>
       </div>
 
       <nav id="navbar" class="navbar">
