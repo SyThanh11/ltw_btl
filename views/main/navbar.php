@@ -1,5 +1,8 @@
 <?php
-  session_start();
+  if(!isset($_SESSION)) 
+  { 
+      session_start(); 
+  }
   if (isset($_SESSION['guest']))
   {
     require_once('models/user.php');
@@ -154,14 +157,14 @@
           <?php
           if (!isset($_SESSION["guest"])){
             echo '
-              <li><a href="index.php?page=main&controller=login&action=index" class="box-arrow-in-right"><i class="bu bi-file-lock-fill"></i></a></li> <!-- Đăng nhập -->
-              <li><a href="index.php?page=main&controller=register&action=index" class="box-arrow-in-right"><i class="bu bi-person-lines-fill"></i></a></li> <!-- Đăng ký -->
+              <li><a href="index.php?page=main&controller=login&action=index" class="box-arrow-in-right"><i class="bi bi-box-arrow-left" style="font-size: 30px;"></i></a></li> <!-- Đăng nhập -->
+              <li><a href="index.php?page=main&controller=register&action=index" class="box-arrow-in-right"><i class="bi bi-pencil-square" style="font-size: 30px;"></i></a></li> <!-- Đăng ký -->
             ';
           }
           else{
             echo '
-            <li><a href="" data-toggle="modal" data-target="#EditUserModal"><i class="bu bi-person-badge-fill"></i></a></li>
-            <li><a href="index.php?page=main&controller=login&action=logout" class="box-arrow-in-right"><i class="bu bi-box-arrow-right"></i></a></li> <!-- Đăng xuất -->
+            <li><a href="" data-toggle="modal" data-target="#EditUserModal"><i class="bi bi-person-circle" style="font-size: 30px;"></i></a></li>
+            <li><a href="index.php?page=main&controller=login&action=logout" class="box-arrow-in-right"><i class="bu bi-box-arrow-right" style="font-size: 30px;"></i></a></li> <!-- Đăng xuất -->
             ';
           }
           ?>
