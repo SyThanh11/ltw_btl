@@ -71,9 +71,8 @@ $(".btn-comment")
             console.log(response);
             if (response == 'success')
             {
-                console.log(location.href+`#block>*`);
-                $("#block").load(location.href+`#block>*`,"");
-                $(`#modal-${news}`).load(location.href+`#modal-${news}>*`,"");
+                $("#block").load(location.href+` #block>*`,"");
+                $(`#modal-${news}`).load(location.href+` #modal-${news}>*`,"");
                 $(`#modal-${news}`).modal("show");
             }
             else 
