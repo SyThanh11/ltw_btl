@@ -19,7 +19,7 @@
 </head>
 <body class="hold-transition login-page">
 	<div class="login-box">
-		<div class="login-logo"><a href="#"><b>Website</b>Managing-System</a></div>
+		<h1 class="login-logo"><b style="color: #ff590f;">VNG</b> - Admin Login</h1>
 		<!-- /.login-logo-->
 		<div class="card">
 			<div class="card-body login-card-body">
@@ -35,7 +35,7 @@
 					<div class="input-group mb-3">
 						<input class="form-control" type="text" placeholder="Tài khoản" name="username">
 						<div class="input-group-append">
-							<div class="input-group-text"><span class="fas fa-envelope"></span></div>
+							<div class="input-group-text"><span class="fas fa-user"></span></div>
 						</div>
 					</div>
 					<div class="input-group mb-3">
