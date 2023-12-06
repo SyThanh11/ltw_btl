@@ -1,3 +1,4 @@
+$( document ).ready(function() {
 $(".btn-reply")
 .click(function (e)
 {
@@ -13,7 +14,7 @@ $(".btn-reply")
         news = $(this).data("news");
     }
     var parent = $(this).data("parent");
-    var content = $(this).parent().find("textarea").val();
+    var content = $(this).parent().parent().find("textarea").val();
     $.ajax
     ({
         type:'post',
@@ -34,7 +35,8 @@ $(".btn-reply")
             }
             else 
             {
-                alert('Cannot insert! Please try again or log in. The problem is' + response);
+                alert('Cannot insert! Please try again or log in.');
+                location.href='index.php?page=main&controller=login&action=index';
             }
     }});
 });
@@ -43,7 +45,6 @@ $(".btn-comment")
 .click(function (e)
 {
     var user = $(this).data("user");
-    console.log("HERE");
     var news;
     if ($(this).data("news") == '')
     {
@@ -55,6 +56,7 @@ $(".btn-comment")
     }
     var parent = $(this).data("parent");
     var content = $(this).parent().parent().find("textarea").val();
+    console.log("btn-comment" + content);
     $.ajax
     ({
         type:'post',
@@ -69,13 +71,16 @@ $(".btn-comment")
             console.log(response);
             if (response == 'success')
             {
-                $("#block").load(location.href+` #block>*`,"");
-                $(`#modal-${news}`).load(location.href+` #modal-${news}>*`,"");
+                console.log(location.href+`#block>*`);
+                $("#block").load(location.href+`#block>*`,"");
+                $(`#modal-${news}`).load(location.href+`#modal-${news}>*`,"");
                 $(`#modal-${news}`).modal("show");
             }
             else 
             {
-                alert('Cannot insert! Please try again or log in. The problem is' + response);
+                alert('Cannot insert! Please try again or log in.');
+                location.href='index.php?page=main&controller=login&action=index';
             }
     }});
 });
+})
