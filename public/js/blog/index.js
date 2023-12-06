@@ -29,7 +29,7 @@ $(".btn-reply")
         success:function(response) {
             if (response == 'success')
             {
-                $("#block").load(location.href+` #block>*`,"");
+                $("#blog").load(location.href+` #blog>*`,"");
                 $(`#modal-${news}`).load(location.href+` #modal-${news}>*`,"");
                 $(`#modal-${news}`).modal("show");
             }
@@ -41,9 +41,8 @@ $(".btn-reply")
     }});
 });
 
-$(".btn-comment")
-.click(function (e)
-{
+$(document).on('click', ".btn-comment", function(e){
+    console.log("Click btn-comment");
     var user = $(this).data("user");
     var news;
     if ($(this).data("news") == '')
@@ -80,6 +79,5 @@ $(".btn-comment")
                 alert('Cannot insert! Please try again or log in.');
                 location.href='index.php?page=main&controller=login&action=index';
             }
-    }});
-});
-})
+    }});  
+})});
