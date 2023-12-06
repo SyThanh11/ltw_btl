@@ -13,7 +13,7 @@ class BlogController extends BaseController
 	public function index()
 	{
 		$currentPage = isset($_GET['pg']) ? $_GET['pg'] : 1;
-        $postsPerPage = 4;
+        $postsPerPage = 3;
 
 		$newses = News::getAllShow();
 		$recent = News::recentNews();
