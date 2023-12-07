@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2023 at 01:58 PM
+-- Generation Time: Dec 07, 2023 at 05:25 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -30,6 +30,7 @@ USE `web`;
 
 CREATE TABLE `admin` (
   `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `password` varchar(255) DEFAULT NULL,
   `role` varchar(255) DEFAULT '0',
   `createAt` datetime DEFAULT NULL,
@@ -40,10 +41,10 @@ CREATE TABLE `admin` (
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`username`, `password`, `role`, `createAt`, `updateAt`) VALUES
-('admin', '$2y$10$0PhTjj7OnPIQYbx9LP8w9ehSKZOzRh79hSNI.kk9p9Tq9fWu5lWtK', '1', NULL, '2022-06-12 14:02:17'),
-('khang', '$2y$10$FPxhqC1y4a5wrHOIMuLVnu7NfblijUyzOzO0KE3zZ4z1gpjUI8z8y', '0', '2023-12-06 16:18:07', '2023-12-06 16:18:07'),
-('sythanh', '$2y$10$0PhTjj7OnPIQYbx9LP8w9ehSKZOzRh79hSNI.kk9p9Tq9fWu5lWtK', '0', NULL, '2022-06-12 14:02:09');
+INSERT INTO `admin` (`username`, `email`, `password`, `role`, `createAt`, `updateAt`) VALUES
+('admin', 'admin@gmail.com', '$2y$10$0PhTjj7OnPIQYbx9LP8w9ehSKZOzRh79hSNI.kk9p9Tq9fWu5lWtK', '1', NULL, '2022-06-12 14:02:17'),
+('khang', 'khang@gmail.com', '$2y$10$FPxhqC1y4a5wrHOIMuLVnu7NfblijUyzOzO0KE3zZ4z1gpjUI8z8y', '0', '2023-12-06 16:18:07', '2023-12-06 16:18:07'),
+('sythanh', 'sythanh@gmail.com', '$2y$10$0PhTjj7OnPIQYbx9LP8w9ehSKZOzRh79hSNI.kk9p9Tq9fWu5lWtK', '0', NULL, '2022-06-12 14:02:09');
 
 -- --------------------------------------------------------
 
@@ -66,7 +67,7 @@ CREATE TABLE `comment` (
 --
 
 INSERT INTO `comment` (`id`, `date`, `approved`, `content`, `news_id`, `user_id`, `parent`) VALUES
-(55, '2023-12-06 16:25:26', 1, 'rất hay', 5, 'phamduchao2k3@gmail.com', NULL),
+(55, '2023-12-06 16:25:26', 0, 'rất hay', 5, 'phamduchao2k3@gmail.com', NULL),
 (58, '2023-12-06 16:36:46', 1, 'hay quá !!!', 4, 'abc@gmail.com', NULL),
 (59, '2023-12-06 16:38:19', 1, 'chúc mừng zaloPay', 4, 'abc@gmail.com', NULL),
 (63, '2023-12-06 17:01:41', 1, 'ai muốn join team thì ib mình nhé sđt: 012345678', 5, 'phamduchao2k3@gmail.com', NULL),
@@ -86,7 +87,11 @@ INSERT INTO `comment` (`id`, `date`, `approved`, `content`, `news_id`, `user_id`
 (85, '2023-12-06 19:24:13', 1, 'quá ngạo nghễ', 3, 'hao.pham1652003@hcmut.edu.vn', NULL),
 (86, '2023-12-06 19:34:17', 1, 'đúng vậy', 3, 'abc@gmail.com', 85),
 (87, '2023-12-06 19:37:00', 1, 'quá đúng!', 3, 'abc@gmail.com', 84),
-(88, '2023-12-06 19:39:04', 1, 'tuyệt vời', 4, 'abc@gmail.com', NULL);
+(88, '2023-12-06 19:39:04', 1, 'tuyệt vời', 4, 'abc@gmail.com', NULL),
+(95, '2023-12-06 20:41:05', 1, 'tuyệt vời', 6, 'hao.pham1652003@hcmut.edu.vn', NULL),
+(96, '2023-12-06 20:42:52', 1, 'thích quá', 5, 'hao.pham1652003@hcmut.edu.vn', NULL),
+(98, '2023-12-07 10:37:29', 1, 'ok', 6, 'hao.pham1652003@hcmut.edu.vn', 95),
+(99, '2023-12-07 10:37:34', 1, 'hay quá', 6, 'hao.pham1652003@hcmut.edu.vn', NULL);
 
 -- --------------------------------------------------------
 
@@ -109,6 +114,28 @@ CREATE TABLE `company` (
 INSERT INTO `company` (`id`, `name`, `address`, `createAt`, `updateAt`) VALUES
 (1, 'Chi nhánh TPHCM', '268 Lý Thường Kiệt, Phường 14, Quận 10, TPHCM', NULL, NULL),
 (2, 'Chi nhánh Đà Nẵng', 'Số 346, đường 2/9,\nQuận Hải Châu,\nThành phố Đà Nẵng', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `creates`
+--
+
+CREATE TABLE `creates` (
+  `news_id` int(11) NOT NULL,
+  `admin_email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `creates`
+--
+
+INSERT INTO `creates` (`news_id`, `admin_email`) VALUES
+(1, 'admin@gmail.com'),
+(3, 'admin@gmail.com'),
+(4, 'sythanh@gmail.com'),
+(5, 'sythanh@gmail.com'),
+(6, 'khang@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -197,7 +224,7 @@ INSERT INTO `user` (`email`, `profile_photo`, `fname`, `lname`, `gender`, `birth
 -- Indexes for table `admin`
 --
 ALTER TABLE `admin`
-  ADD PRIMARY KEY (`username`);
+  ADD PRIMARY KEY (`username`,`email`);
 
 --
 -- Indexes for table `comment`
@@ -213,6 +240,12 @@ ALTER TABLE `comment`
 --
 ALTER TABLE `company`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `creates`
+--
+ALTER TABLE `creates`
+  ADD PRIMARY KEY (`news_id`,`admin_email`);
 
 --
 -- Indexes for table `news`
@@ -240,7 +273,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 
 --
 -- AUTO_INCREMENT for table `company`
