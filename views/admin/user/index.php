@@ -144,7 +144,7 @@ require_once('views/admin/content_layouts.php'); ?>
 									<?php
 									$index = 1;
 									foreach ($user as $user) {
-										echo "<tr class='text-center' style='height:300px; line-height:300px; white-space: nowrap;'>";
+										echo "<tr class='text-center' style='white-space: nowrap;'>";
 										echo "<td>" . $index++ . "</td>";
 										echo "<td>" . $user->fname . "</td>";
 										echo "<td>" . $user->lname . "</td>";
