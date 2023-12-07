@@ -22,11 +22,11 @@ require_once('views/admin/content_layouts.php'); ?>
 		<div class="container-fluid">
 			<div class="row mb-2">
 				<div class="col-sm-6">
-					<h1>Quản lý Liên hệ khách hàng</h1>
+					<h1 style="color: #e65a26">Quản lý Liên hệ khách hàng</h1>
 				</div>
 				<div class="col-sm-6">
 					<ol class="breadcrumb float-sm-right">
-						<li class="breadcrumb-item"><a href="page=admin&controller=layouts&action=index">Home</a></li>
+						<li class="breadcrumb-item"><a href="page=admin&controller=layouts&action=index" style="color: #e65a26">Home</a></li>
 						<li class="breadcrumb-item active">Quản lý Liên hệ khách hàng</li>
 					</ol>
 				</div>
@@ -42,7 +42,7 @@ require_once('views/admin/content_layouts.php'); ?>
 					<div class="card">
 						<div class="card-body">
 							<!-- Button trigger modal-->
-							<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#addUserModal">Thêm mới</button>
+							<button class="btn" style="background-color: #e65a26; color: white" type="button" data-toggle="modal" data-target="#addUserModal">Thêm mới</button>
 							<!-- Modal-->
 							<div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="addUserModal" aria-hidden="true">
 								<div class="modal-dialog" role="document">
@@ -120,7 +120,7 @@ require_once('views/admin/content_layouts.php'); ?>
 											</div>
 											<div class="modal-footer">
 												<button class="btn btn-secondary" type="button" data-dismiss="modal">Đóng lại</button>
-												<button class="btn btn-primary" type="submit">Thêm mới</button>
+												<button class="btn btn-success" type="submit">Thêm mới</button>
 											</div>
 										</form>
 									</div>
@@ -129,7 +129,7 @@ require_once('views/admin/content_layouts.php'); ?>
 
 							<table class="table table-bordered table-striped" id="tab-user">
 								<thead>
-									<tr class="text-center">
+									<tr class="text-center" style="color: #e65a26">
 										<th>STT</th>
 										<th>Họ và tên lót</th>
 										<th>Tên</th>
@@ -232,8 +232,8 @@ require_once('views/admin/content_layouts.php'); ?>
 												</div>
 											</div>
 											<div class="modal-footer">
-												<button class="btn btn-secondary" type="button" data-dismiss="modal">Đóng lại</button>
-												<button class="btn btn-primary" type="submit">Cập nhật</button>
+												<button class="btn btn-secondary" type="button" data-dismiss="modal">Đóng</button>
+												<button class="btn btn-info" type="submit">Cập nhật</button>
 											</div>
 										</form>
 									</div>
@@ -255,19 +255,14 @@ require_once('views/admin/content_layouts.php'); ?>
 													<input class="form-control" type="text" placeholder="Email" name="email" readonly />
 												</div>
 
-												<!-- <div class="form-group">
-													<label> Password hiện tại</label>
-													<input class="form-control" type="password" placeholder="Please enter your new password" name="current-password" />
-												</div> -->
-
 												<div class="form-group">
 													<label>Password mới</label>
 													<input class="form-control" type="password" placeholder="Please enter your new password" name="new-password" />
 												</div>
 											</div>
 											<div class="modal-footer">
-												<button class="btn btn-secondary" type="button" data-dismiss="modal">Đóng lại</button>
-												<button class="btn btn-primary" type="submit">Cập nhật</button>
+												<button class="btn btn-secondary" type="button" data-dismiss="modal">Đóng</button>
+												<button class="btn btn-info" type="submit">Cập nhật</button>
 											</div>
 										</form>
 									</div>
@@ -276,7 +271,7 @@ require_once('views/admin/content_layouts.php'); ?>
 
 							<div class="modal fade" id="DeleteUserModal" tabindex="-1" role="dialog" aria-labelledby="DeleteUserModal" aria-hidden="true">
 								<div class="modal-dialog" role="document">
-									<div class="modal-content bg-danger">
+									<div class="modal-content">
 										<div class="modal-header">
 											<h5 class="modal-title">Xóa</h5>
 											<button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -288,7 +283,7 @@ require_once('views/admin/content_layouts.php'); ?>
 												<p>Bạn chắc chưa ?</p>
 											</div>
 											<div class="modal-footer">
-												<button class="btn btn-danger btn-outline-light" type="button" data-dismiss="modal">Đóng lại</button>
+												<button class="btn btn-secondary btn-outline-light" type="button" data-dismiss="modal">Đóng</button>
 												<button class="btn btn-danger btn-outline-light" type="submit">Xác nhận</button>
 											</div>
 										</form>

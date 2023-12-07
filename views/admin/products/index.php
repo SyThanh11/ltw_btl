@@ -21,11 +21,11 @@ require_once('views/admin/content_layouts.php'); ?>
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Quản lý Sản phẩm</h1>
+                    <h1 style="color: #e65a26">Quản lý Sản phẩm</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="page=admin&controller=layouts&action=index">Home</a></li>
+                        <li class="breadcrumb-item"><a href="page=admin&controller=layouts&action=index" style="color: #e65a26">Home</a></li>
                         <li class="breadcrumb-item active">Quản lý Sản phẩm</li>
                     </ol>
                 </div>
@@ -41,7 +41,7 @@ require_once('views/admin/content_layouts.php'); ?>
                     <div class="card">
                         <!-- /.card-header-->
                         <div class="card-body">
-                        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#addUserModal">Thêm mới</button>
+                        <button class="btn" type="button" data-toggle="modal" data-target="#addUserModal" style="background-color: #e65a26; color: white;">Thêm mới</button>
                         <div class="modal fade" id="addUserModal"  aria-labelledby="addUserModal" aria-hidden="true">
                             <div class="modal-dialog modal-xl">
                                 <div class="modal-content">
@@ -61,7 +61,7 @@ require_once('views/admin/content_layouts.php'); ?>
                                         </div>
                                         <div class="modal-footer">
                                             <button class="btn btn-secondary" type="button" data-dismiss="modal">Đóng</button>
-                                        <button class="btn btn-primary" type="submit">Thêm mới</button>
+                                        <button class="btn btn-success" type="submit">Thêm mới</button>
                                     </div>
                                     </form>
                                 </div>
@@ -70,7 +70,7 @@ require_once('views/admin/content_layouts.php'); ?>
                             <div class="row"></div>
                                 <table id="TAB-product" class="table table-bordered table-striped"> 
                                     <thead>
-                                        <tr  class="text-center">
+                                        <tr  class="text-center" style="color: #e65a26" >
                                             <th scope="col">STT</th>
                                             <th scope="col">Tên sản phẩm</th>
                                             <th scope="col">Mô tả</th>
@@ -104,13 +104,11 @@ require_once('views/admin/content_layouts.php'); ?>
                                                     <td>
                                                     <img style=\"width: 300px; height:300px;\" src='$product->img'>
                                                     </td>   
-                                                    <td >
+                                                    <td class='d-flex'>
                                                     <button class=\"btn-edit btn btn-primary btn-xs\" style=\"margin-right: 5px;\" data-id='$product->id' data-name='$product->name' data-price='$product->price' data-description='$product->description' data-content='$product->content' data-img='$product->img'> <i style=\"font-size:17px;\" class=\"fas fa-edit\" ></i></button>
                                                     <button class=\"btn-delete btn btn-danger btn-xs\" style=\"margin-right: 5px\" data-id='$product->id' ><i style=\"font-size:17px;\" class=\"fas fa-trash\"></i></button> 
                                                     </td>     
-                                                    <td>
-                                                    
-                                                  </td>                                                                                                                                                                                       
+                                                    <td style='display: none;'></td>   
                                                 </tr>";
                                                 $index++;
                                             }
@@ -136,14 +134,14 @@ require_once('views/admin/content_layouts.php'); ?>
                                                         <div class="form-group"> <label> Hình ảnh </label>&nbsp <input type="file" name="fileToUpload" id="fileToUpload" /></div>
 
                                                     </div>
-                                                    <div class="modal-footer"><button class="btn btn-secondary" type="button" data-dismiss="modal">Đóng</button><button class="btn btn-primary formedit" type="submit">Cập nhật</button></div>
+                                                    <div class="modal-footer"><button class="btn btn-secondary" type="button" data-dismiss="modal">Đóng</button><button class="btn btn-info formedit" type="submit">Cập nhật</button></div>
                                                 </form>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="modal fade" id="DeleteStudentModal" tabindex="-1" role="dialog" aria-labelledby="DeleteStudentModal" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
-                                            <div class="modal-content bg-danger">
+                                            <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h5 class="modal-title">Xóa</h5><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                 </div>
@@ -151,7 +149,7 @@ require_once('views/admin/content_layouts.php'); ?>
                                                     <div class="modal-body"><input type="hidden" name="id" />
                                                         <p>Bạn có chắc chắn muốn xóa sản phẩm này?</p>
                                                     </div>
-                                                    <div class="modal-footer"><button class="btn btn-danger btn-outline-light" type="button" data-dismiss="modal">Đóng</button><button class="btn btn-danger btn-outline-light" type="submit">Xóa</button></div>
+                                                    <div class="modal-footer"><button class="btn btn-secondary btn-outline-light" type="button" data-dismiss="modal">Đóng</button><button class="btn btn-danger btn-outline-light" type="submit">Xóa</button></div>
                                                 </form>
                                             </div>
                                         </div>

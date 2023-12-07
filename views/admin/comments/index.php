@@ -20,11 +20,11 @@ require_once('views/admin/content_layouts.php'); ?>
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Bình luận - Đánh giá</h1>
+                    <h1 style="color: #e65a26">Bình luận - Đánh giá</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="page=admin&controller=layouts&action=index">Home</a></li>
+                        <li class="breadcrumb-item"><a href="page=admin&controller=layouts&action=index" style="color: #e65a26">Home</a></li>
                         <li class="breadcrumb-item active">Bình luận - Đánh giá</li>
                     </ol>
                 </div>
@@ -43,7 +43,7 @@ require_once('views/admin/content_layouts.php'); ?>
                                 <div class="col-12">
                                     <table id="giaotrinhofkh" class="table table-bordered table-striped" style="margin-top:6px;">
                                         <thead>
-                                            <tr class="text-center">
+                                            <tr class="text-center" style="color: #e65a26">
                                                 <th style="width: 220px;">STT</th>
                                                 <th style="width: 220px;">Bài viết</th>
                                                 <th style="width: 220px;">Thời gian</th>
@@ -61,10 +61,10 @@ require_once('views/admin/content_layouts.php'); ?>
 
                                             foreach ($comments as $comment) {
                                                 $status = ($comment->approved) ? 'Hiện' : 'Ẩn';
-                                                $button = ($comment->approved) ? "<button data-toggle='tooltip' data-placement='top' title='Ẩn bình luận' class=\"btn-hide btn btn-danger btn-xs\" style=\"margin-right: 5px\" data-id='$comment->id' ><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-x-lg\" viewBox=\"0 0 16 16\">
+                                                $button = ($comment->approved) ? "<button data-toggle='tooltip' data-placement='top' title='Ẩn bình luận' class=\"btn-hide btn btn-secondary btn-xs\" style=\"margin-right: 5px\" data-id='$comment->id' ><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-x-lg\" viewBox=\"0 0 16 16\">
                                                       <path fill-rule=\"evenodd\" d=\"M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z\"/>
                                                       <path fill-rule=\"evenodd\" d=\"M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z\"/>
-                                                      </svg></button>" : "<button data-toggle='tooltip' data-placement='top' title='Hiện bình luận' class=\"btn-hide btn btn-primary btn-xs\" style=\"margin-right: 5px\" data-id='$comment->id' > <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-check-lg\" viewBox=\"0 0 16 16\">
+                                                      </svg></button>" : "<button data-toggle='tooltip' data-placement='top' title='Hiện bình luận' class=\"btn-hide btn btn-success btn-xs\" style=\"margin-right: 5px\" data-id='$comment->id' > <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-check-lg\" viewBox=\"0 0 16 16\">
                                                       <path d=\"M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z\"/>
                                                     </svg></button>";
                                                 echo
@@ -99,7 +99,7 @@ require_once('views/admin/content_layouts.php'); ?>
                                         </tbody>
                                         <div class="modal fade" id="HideStudentModal" tabindex="-1" role="dialog" aria-labelledby="HideStudentModal" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
-                                                <div class="modal-content bg-danger">
+                                                <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title">Ẩn hay hiện bình luận</h5><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                     </div>
@@ -107,14 +107,14 @@ require_once('views/admin/content_layouts.php'); ?>
                                                         <div class="modal-body"><input type="hidden" name="id" />
                                                             <p>Bạn có chắc chắn?</p>
                                                         </div>
-                                                        <div class="modal-footer"><button class="btn btn-danger btn-outline-light" type="button" data-dismiss="modal">Đóng</button><button class="btn btn-danger btn-outline-light" type="submit">Cập nhật</button></div>
+                                                        <div class="modal-footer"><button class="btn btn-danger btn-outline-light" type="button" data-dismiss="modal">Đóng</button><button class="btn btn-outline-light btn-info" type="submit">Cập nhật</button></div>
                                                     </form>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="modal fade" id="DeleteStudentModal" tabindex="-1" role="dialog" aria-labelledby="DeleteStudentModal" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
-                                                <div class="modal-content bg-danger">
+                                                <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title">Xóa</h5><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                     </div>
@@ -122,7 +122,7 @@ require_once('views/admin/content_layouts.php'); ?>
                                                         <div class="modal-body"><input type="hidden" name="id" />
                                                             <p>Bạn có chắc chắn muốn xóa bình luận?</p>
                                                         </div>
-                                                        <div class="modal-footer"><button class="btn btn-danger btn-outline-light" type="button" data-dismiss="modal">Đóng</button><button class="btn btn-danger btn-outline-light" type="submit">Xóa</button></div>
+                                                        <div class="modal-footer"><button class="btn btn-secondary btn-outline-light" type="button" data-dismiss="modal">Đóng</button><button class="btn btn-danger btn-outline-light" type="submit">Xóa</button></div>
                                                     </form>
                                                 </div>
                                             </div>

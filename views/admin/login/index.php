@@ -48,7 +48,7 @@
 						<div class="col-7"></div>
 						<!-- /.col-->
 						<div class="col-5">
-							<button class="btn btn-primary btn-block" type="submit">Đăng nhập</button>
+							<button class="btn btn-block" style="background-color: #e65a26; color: white" type="submit">Đăng nhập</button>
 						</div>
 						<!-- /.col-->
 					</div>

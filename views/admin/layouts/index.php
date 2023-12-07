@@ -20,14 +20,8 @@ require_once('views/admin/content_layouts.php'); ?>
 	<section class="content-header">
 		<div class="container-fluid">
 			<div class="row mb-2">
-				<div class="col-sm-8">
-					<h1>Chào mừng đến với khu vực của quản trị viên</h1>
-				</div>
-				<div class="col-sm-4">
-					<ol class="breadcrumb float-sm-right">
-						<li class="breadcrumb-item"><a href="index.php?page=admin&controller=layouts&action=index">Home</a></li>
-						<li class="breadcrumb-item active"></li>
-					</ol>
+				<div class="col-sm-12">
+					<h1 style="color: #e65a26">Chào mừng đến với khu vực của quản trị viên</h1>
 				</div>
 			</div>
 		</div><!-- /.container-fluid -->
@@ -39,13 +33,13 @@ require_once('views/admin/content_layouts.php'); ?>
 			<div class="invoice p-3 mb-3">
 				<div class="row invoice-info">
 					<div class="col-sm-6 invoice-col">
-						<ul style="list-style: none;">
+						<ul style="list-style: none;" >
 							<?php
 								if($_SESSION['role'] == 1){
 									echo '
-									<li>
-										<a href="index.php?page=admin&controller=admin&action=index">
-											<i class="fas fa-user-graduate"></i>
+									<li class="mt-2">
+										<a href="index.php?page=admin&controller=admin&action=index" style="color: #e65a26">
+											<i class="fas fa-user-graduate" style="color: #e65a26"></i>
 											Danh sách Admin
 										</a>
 									</li>
@@ -54,15 +48,15 @@ require_once('views/admin/content_layouts.php'); ?>
 								}
 							?>
 							
-							<li>
-								<a href="index.php?page=admin&controller=comments&action=index">
-									<i class="fas fa-comments"></i>
+							<li class="mt-2">
+								<a href="index.php?page=admin&controller=comments&action=index" style="color: #e65a26">
+									<i class="fas fa-comments" style="color: #e65a26"></i>
 									Bình luận - Đánh giá
 								</a>
 							</li>
-							<li>
-								<a href="index.php?page=admin&controller=user&action=index" > 
-									<i class="fas fa-users-cog"></i>
+							<li class="mt-2">
+								<a href="index.php?page=admin&controller=user&action=index" style="color: #e65a26"> 
+									<i class="fas fa-users-cog" style="color: #e65a26"></i>
 									Liên hệ khách hàng
 								</a>
 							</li>
@@ -71,22 +65,22 @@ require_once('views/admin/content_layouts.php'); ?>
 					<!-- /.col -->
 					<div class="col-sm-6 invoice-col">
 						<ul style="list-style: none;">
-							<li>
-								<a href="index.php?page=admin&controller=admin&action=index">
-									<i class="fas fa-cube"></i>
+							<li class="mt-2">
+								<a href="index.php?page=admin&controller=products&action=index" style="color: #e65a26">
+									<i class="fas fa-cube" style="color: #e65a26"></i>
 									Quản lý Sản phẩm
 								</a>
 							</li>
 							
-							<li>
-								<a href="index.php?page=admin&controller=admin&action=index">
-									<i class="fas fa-file"></i>
+							<li class="mt-2">
+								<a href="index.php?page=admin&controller=news&action=index" style="color: #e65a26">
+									<i class="fas fa-file" style="color: #e65a26"></i>
 									Quản lý tin tức
 								</a>
 							</li>
-							<li>
-								<a href="index.php?page=admin&controller=user&action=index" > 
-									<i class="fas fa-newspaper"></i>
+							<li class="mt-2">
+								<a href="index.php?page=admin&controller=company&action=index" style="color: #e65a26"> 
+									<i class="fas fa-newspaper" style="color: #e65a26"></i>
 									Danh sách chi nhánh
 								</a>
 							</li>
