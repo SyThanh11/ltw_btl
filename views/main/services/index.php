@@ -93,16 +93,16 @@ include_once('views/main/navbar.php');
           <h2>Sản phẩm</h2>
           <p>Các sản phẩm nổi bật</p>
         </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row g-4">
 
         <?php
           foreach ($products as $product) {
             echo
               '<!-- Card 1 -->
-              <div class="col" style="cursor: pointer;" data-aos="zoom-in" data-aos-delay="100" data-bs-toggle="modal" data-bs-target="#exampleModal'.$product->id.'">
-                <div class="card" style="width: 26rem; height: 100%; border: 2px solid rgb(230, 91, 40); border-radius: 10%; overflow: hidden;">
+              <div class="col-lg-4 d-flex col-md-6 col-sm-12" style="cursor: pointer;" data-aos="zoom-in" data-aos-delay="100" data-bs-toggle="modal" data-bs-target="#exampleModal'.$product->id.'">
+                <div class="card justify-content-center" style="margin: 0 auto; width: 26rem; height: 100%; border: 2px solid rgb(230, 91, 40); border-radius: 10%; overflow: hidden;">
                   <div class="h-100 w-100 card-top" style="display: flex; justify-content: center; overflow: hidden; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
-                    <img src="' . $product->img . '" alt="..." style="width: 100%; height: 350px; padding: 40px";  ">
+                    <img src="' . $product->img . '" alt="..." style="width: 100%; height: 350px; padding: 40px";">
                   </div>
                   <div class="card-body" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
                     <h4 class="card-title" style="color: rgb(230, 91, 40); font-weight: 600!important"; >' . $product->name .'</h4>
