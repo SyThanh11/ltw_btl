@@ -115,7 +115,7 @@
             </div>
             <div class="form-group" style="margin-top: 5%;">
               <label>Hình ảnh hiện tại </label>
-              <img style="width: 90%; height: auto; margin: 5%" src="' . $data->profile_photo . '">
+              <img style="width: 90%; height: auto; margin: 5%" alt="chưa upload" src="' . $data->profile_photo . '">
               
             </div>
             <div class="form-group" style="margin-top: 5%;">
@@ -125,7 +125,7 @@
           </div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Đóng lại</button>
-            <button class="btn btn-primary" type="submit">Cập nhật</button>
+            <button class="btn btn-info" type="submit">Cập nhật</button>
           </div>
         </form>
       </div>

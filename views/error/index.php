@@ -3,7 +3,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>VNG Corporation - Công ty Cổ phần VNG</title>
+
+	<link href="https://corp.vcdn.vn/products/vng/icon_fav_vng.ico?fbclid=IwAR0h1PuAfP2FuJMzcW66Wk-3rPsq8HnvEmeg5ttZjv3-jgynNeyZdfWO5T8" rel="icon">
+
   <link rel="stylesheet" href="public/js/error/index.css">
 </head>
 <body>
